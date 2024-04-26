@@ -1,0 +1,89 @@
+.top_nav {
+    display: flex;
+    font-size: x-large;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin: 0px;
+    border-left: 0px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    text-decoration: none;
+    background-color: #008E9B;
+    background-image: url(../../figures/logo.png);
+    background-repeat: no-repeat;
+    background-position: 60px;
+    background-size: 120px;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.title {
+    text-decoration: none;
+    color: #012525;
+}
+
+.title:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+#profile_nav {
+    font-size: xx-large;
+    border: thick;
+}
+
+#honors_nav {
+    font-size: xx-large;
+}
+
+#practice_nav {
+    font-size: xx-large;
+}
+
+#project_nav {
+    font-size: xx-large;
+}
+
+#introduction_word {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 70px;
+    margin-top: 18%;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+}
+
+.main {
+    background-color: #0b5776;
+}
+
+#home_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0081CF;
+    border: rgb(17, 108, 246);
+    border-radius:30px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px auto; 
+}
+
+#button_link{
+    text-decoration: none;
+}
