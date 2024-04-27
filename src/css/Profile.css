@@ -18,7 +18,7 @@
 
 .title {
     text-decoration: none;
-    color: #046aaa;
+    color: #015990;
 }
 
 .title:hover {
@@ -50,14 +50,10 @@ html {
 
 #figure {
     position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
     width: 200px;
-    justify-content: center;
-    margin: 200px;
+    margin: 190px;
     border-radius: 10%;
-    animation: floatUp 2s forwards;
+    animation: floatUp 1s forwards;
   }
 
 @keyframes floatUp {
@@ -76,4 +72,34 @@ html {
     to {
       opacity: 1;
     }
+  }
+
+  #background_pic{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  #text_1{
+    position: absolute;
+    margin-top: 10%;
+    float: center;
+    margin-left: 35%;
+    border-color: blue;
+    border: #046aaa;
+    font-size: 70px;
+    width: 800px;
+    flex-direction: row;
+  }
+
+  #content_1 {
+    /* 其他样式 */
+    position: absolute;
+    font-size: 16px; /* 修改为适当的字体大小 */
+    margin-top: 17%;
+    float: center;
+    margin-left: 37%;
   }

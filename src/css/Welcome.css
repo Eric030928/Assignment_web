@@ -54,7 +54,7 @@
     flex-wrap: wrap;
     animation-duration: 2s;
     color: #fafafa;
-    animation-name: slidein;
+    animation-name: slide;
 }
 
 .main {
@@ -83,7 +83,7 @@
 }
 
 
-@keyframes slidein {
+@keyframes slide {
     from {
         margin-bottom: 100%;
         width: 300%;
