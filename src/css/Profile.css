@@ -12,22 +12,13 @@
     top: 0px;
     width: 100%;
     text-decoration: none;
-    background-color: #008E9B;
-    background-image: url(../../figures/logo.png);
-    background-repeat: no-repeat;
-    background-position: 60px;
-    background-size: 120px;
-}
-
-* {
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-}
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+  }
 
 .title {
     text-decoration: none;
-    color: #012525;
+    color: #046aaa;
 }
 
 .title:hover {
@@ -37,6 +28,7 @@
 
 #profile_nav {
     font-size: xx-large;
+    text-decoration: underline;
     border: thick;
 }
 
@@ -52,38 +44,36 @@
     font-size: xx-large;
 }
 
-#introduction_word {
+html {
+    background-color: #85b8e2;
+}
+
+#figure {
+    position: absolute;
+    bottom: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 70px;
-    margin-top: 18%;
-    margin-bottom: 3%;
-    flex-wrap: wrap;
-}
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+    margin: 200px;
+    border-radius: 10%;
+    animation: floatUp 2s forwards;
+  }
 
-.main {
-    background-color: #0b5776;
-}
+@keyframes floatUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 
-#home_button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #0081CF;
-    border: rgb(17, 108, 246);
-    border-radius:30px;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 300px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 10px auto; 
-}
-
-#button_link{
-    text-decoration: none;
-}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

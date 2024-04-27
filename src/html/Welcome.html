@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../css/Welcome.css">
+  <script src="../js/Welcome.js"></script>
 </head>
+
 <body>
-    Hello
+  <header>
+    <div class="top_nav">
+      <strong>
+        <div id="profile_nav"><a href="./Profile.html" class="title">Profile</a></div>
+      </strong>
+      <strong>
+        <div id="honors_nav"><a href="./Honors.html" class="title">Honors</a></div>
+      </strong>
+      <strong>
+        <div id="practice_nav"><a href="./Pratice.html" class="title">Practice</a></div>
+      </strong>
+      <strong>
+        <div id="project_nav"><a href="./Project.html" class="title">Projects</a></div>
+      </strong>
+    </div>
+  </header>
+  <div id="video-background">
+    <video autoplay loop muted>
+      <source src="../../figures/home.mp4" type="video/mp4">
+    </video>
+  </div>
+  <main class="content">
+    <section class="s1">
+      <h1 id="introduction_word">Welcome to my world!
+      </h1>
+      <a href="../html/Profile.html" id="button_link">
+        <button id="home_button" onmouseover="learn_hover(this)" onmouseout="learn_hover_out(this)" onclick="jump()">
+          Learn about me!
+        </button>
+      </a>
+    </section>
+  </main>
 </body>
+
 </html>
