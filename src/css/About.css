@@ -26,17 +26,17 @@
     color: darkgreen;
 }
 
-#profile_nav {
+#about_nav {
     font-size: xx-large;
     text-decoration: underline;
     border: thick;
 }
 
-#honors_nav {
+#awards_nav {
     font-size: xx-large;
 }
 
-#practice_nav {
+#_nav {
     font-size: xx-large;
 }
 
@@ -46,14 +46,16 @@
 
 html {
     background-color: #85b8e2;
+    height: 1000px;
 }
 
 #figure {
     position: absolute;
     width: 200px;
-    margin: 190px;
+    margin: 150px;
     border-radius: 10%;
     animation: floatUp 1s forwards;
+    margin-top: 210px;
   }
 
 @keyframes floatUp {
@@ -85,21 +87,42 @@ html {
   
   #text_1{
     position: absolute;
-    margin-top: 10%;
+    margin-top: 4%;
     float: center;
-    margin-left: 35%;
-    border-color: blue;
+    margin-left: 34%;
+    border-color: rgb(0, 0, 0);
     border: #046aaa;
-    font-size: 70px;
+    font-size: 40px;
     width: 800px;
     flex-direction: row;
+    color: #060606;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
 
-  #content_1 {
+  #content {
     /* 其他样式 */
     position: absolute;
-    font-size: 16px; /* 修改为适当的字体大小 */
-    margin-top: 17%;
+    font-size: 25px; /* 修改为适当的字体大小 */
+    margin-top: 7%;
     float: center;
-    margin-left: 37%;
+    margin-left: 32%;
+    color: #000000;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* 白色背景底色，透明度为0.5 */
+    border: 10px solid #000000; /* 黑色边框 */
+    padding-left:30px; /* 向右增加10像素的内边距 */
+    width: 1000px;
+    border-radius: 7%;
   }
+
+  h2{
+    color: #000000;
+
+  }
+
+  #name{
+    color: #000;
+  }
+
+  
