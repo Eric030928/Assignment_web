@@ -29,14 +29,13 @@
 #about_nav {
     font-size: xx-large;
     text-decoration: underline;
-    border: thick;
 }
 
 #awards_nav {
     font-size: xx-large;
 }
 
-#_nav {
+#hobbies_nav {
     font-size: xx-large;
 }
 
@@ -44,18 +43,19 @@
     font-size: xx-large;
 }
 
-html {
-    background-color: #85b8e2;
-    height: 1000px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
+
 #figure {
-    position: absolute;
-    width: 200px;
-    margin: 150px;
+    display: flex;
+    width: 2%;
+    margin-left: 3%;
     border-radius: 10%;
     animation: floatUp 1s forwards;
-    margin-top: 210px;
+    margin-top: 17%;
   }
 
 @keyframes floatUp {
@@ -86,43 +86,57 @@ html {
   }
   
   #text_1{
-    position: absolute;
-    margin-top: 4%;
+    display: flex;
     float: center;
-    margin-left: 34%;
+    margin-top: 6%;
+    margin-left: 35%;
     border-color: rgb(0, 0, 0);
     border: #046aaa;
     font-size: 40px;
+    position: absolute;
     width: 800px;
     flex-direction: row;
     color: #060606;
     text-decoration: underline;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0px;
   }
 
   #content {
     /* 其他样式 */
-    position: absolute;
+    display: flex;
     font-size: 25px; /* 修改为适当的字体大小 */
-    margin-top: 7%;
-    float: center;
-    margin-left: 32%;
+    margin-top: 10%;
     color: #000000;
-    line-height: 30px;
     background-color: rgba(255, 255, 255, 0.5); /* 白色背景底色，透明度为0.5 */
     border: 10px solid #000000; /* 黑色边框 */
-    padding-left:30px; /* 向右增加10像素的内边距 */
-    width: 1000px;
-    border-radius: 7%;
+    padding-left:2%; /* 向右增加10像素的内边距 */
+    border-radius: 5%;
+    flex-direction: column;
+    line-height: 130%;
+    font-size: x-large;
+    margin-left: 33%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+    float: left;
   }
 
   h2{
     color: #000000;
+    margin-left: 1%;
+    margin-top: 3%;
+    border: 0%;
+    margin-bottom: 0;
 
   }
 
   #name{
     color: #000;
+    text-emphasis-position: inline;
   }
 
   
