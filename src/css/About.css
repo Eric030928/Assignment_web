@@ -29,6 +29,7 @@
 #about_nav {
     font-size: xx-large;
     text-decoration: underline;
+    text-decoration-color: #015990;
 }
 
 #awards_nav {
@@ -55,7 +56,8 @@ html, body {
     margin-left: 3%;
     border-radius: 10%;
     animation: floatUp 1s forwards;
-    margin-top: 17%;
+    margin-top: 13%;
+    
   }
 
 @keyframes floatUp {
@@ -85,33 +87,15 @@ html, body {
     z-index: -1;
   }
   
-  #text_1{
-    display: flex;
-    float: center;
-    margin-top: 6%;
-    margin-left: 35%;
-    border-color: rgb(0, 0, 0);
-    border: #046aaa;
-    font-size: 40px;
-    position: absolute;
-    width: 800px;
-    flex-direction: row;
-    color: #060606;
-    text-decoration: underline;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: absolute;
-    left: 0;
-    top: 0px;
-  }
 
   #content {
     /* 其他样式 */
     display: flex;
     font-size: 25px; /* 修改为适当的字体大小 */
-    margin-top: 10%;
+    margin-top: 7%;
     color: #000000;
     background-color: rgba(255, 255, 255, 0.5); /* 白色背景底色，透明度为0.5 */
-    border: 10px solid #000000; /* 黑色边框 */
+    border: 10px solid #78a7f8; /* 黑色边框 */
     padding-left:2%; /* 向右增加10像素的内边距 */
     border-radius: 5%;
     flex-direction: column;
