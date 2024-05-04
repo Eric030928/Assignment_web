@@ -1,47 +1,47 @@
 .top_nav {
-    display: flex;
-    font-size: x-large;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 25px;
-    margin: 0px;
-    border-left: 0px;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    width: 100%;
-    text-decoration: none;
-    opacity: 0;
-    animation: fadeIn 1s 0.5s forwards;
-  }
+  display: flex;
+  font-size: x-large;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 25px;
+  margin: 0px;
+  border-left: 0px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
 
 .title {
-    text-decoration: none;
-    color: #3d027b;
+  text-decoration: none;
+  color: #015990;
 }
 
 .title:hover {
-    text-decoration: underline;
-    color: darkgreen;
+  text-decoration: underline;
+  color: darkgreen;
 }
 
 #about_nav {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 #awards_nav {
-    font-size: xx-large;
-    text-decoration: underline;
-    text-decoration-color: #3d027b;
+  font-size: xx-large;
+  text-decoration: underline;
+  text-decoration-color: #015990;
 }
 
 #hobbies_nav {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 #project_nav {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 html {
@@ -73,8 +73,8 @@ html {
     font-size: 25px; /* 修改为适当的字体大小 */
     margin-top: 7%;
     color: #000000;
-    background-color: rgba(255, 255, 255, 0.5); /* 白色背景底色，透明度为0.5 */
-    border: 10px solid #d8abfd; /* 黑色边框 */
+    background-color: rgba(255, 255, 255, 0.9); /* 白色背景底色，透明度为0.5 */
+    border: 10px solid #78a7f8; /* 黑色边框 */
     padding-left:2%; /* 向右增加10像素的内边距 */
     border-radius: 5%;
     flex-direction: column;
@@ -86,6 +86,7 @@ html {
     top: 0;
     width: 80%;
     float: left;
+    animation: floatLeft 1s forwards;
   }
 
   h2{
@@ -100,4 +101,22 @@ html {
   #name{
     color: #000;
     text-emphasis-position: inline;
+  }
+
+  @keyframes floatUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }

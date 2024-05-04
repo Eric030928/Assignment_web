@@ -15,72 +15,36 @@
     opacity: 0;
     animation: fadeIn 1s 0.5s forwards;
   }
-
-.title {
+  
+  .title {
     text-decoration: none;
     color: #015990;
-}
-
-.title:hover {
+  }
+  
+  .title:hover {
     text-decoration: underline;
     color: darkgreen;
-}
-
-#about_nav {
+  }
+  
+  #about_nav {
+    font-size: xx-large;
+  }
+  
+  #awards_nav {
+    font-size: xx-large;
+  }
+  
+  #hobbies_nav {
     font-size: xx-large;
     text-decoration: underline;
     text-decoration-color: #015990;
-}
-
-#awards_nav {
+  }
+  
+  #project_nav {
     font-size: xx-large;
-}
-
-#hobbies_nav {
-    font-size: xx-large;
-}
-
-#project_nav {
-    font-size: xx-large;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-
-#figure {
-    display: flex;
-    width: 500px;
-    height: 600px;
-    margin-left: 3%;
-    border-radius: 10%;
-    animation: floatUp 1s forwards;
-    margin-top: 12%;
-    
   }
 
-  #figure_1 {
-    display: flex;
-    margin-left: 4.5%;
-    border-radius: 10%;
-    animation: floatUp 1s forwards;
-    margin-top: 13%;
-    margin-bottom: 1%;
-    
-  }
-
-@keyframes floatUp {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {
       opacity: 0;
     }
@@ -97,9 +61,8 @@ html, body {
     height: 100%;
     z-index: -1;
   }
-  
 
-  #content {
+  .content {
     /* 其他样式 */
     display: flex;
     font-size: 25px; /* 修改为适当的字体大小 */
@@ -112,27 +75,51 @@ html, body {
     flex-direction: column;
     line-height: 130%;
     font-size: x-large;
-    margin-left: 33%;
+    margin-left: 10%;
     position: absolute;
     left: 0;
     top: 0;
-    width: 60%;
-    float: left;
+    width: 80%;
     animation: floatUp 1s forwards;
   }
 
-  h2{
-    color: #000000;
-    margin-left: 1%;
-    margin-top: 3%;
-    border: 0%;
-    margin-bottom: 0;
-
+  @keyframes floatUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 
-  #name{
-    color: #000;
-    text-emphasis-position: inline;
+  .slideshow-container {
+    position: fixed;
+    margin-top: 12%;
+    float:left;
+    height: 800px;
+    width: 400px;
   }
-
   
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .P1{
+    width: 60%;
+    display: flex;
+    margin-left: 38%;
+  }
