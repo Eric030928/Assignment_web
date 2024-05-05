@@ -27,21 +27,21 @@
 }
 
 #about_nav {
-  font-size: xx-large;
+  font-size: 40px;
 }
 
 #awards_nav {
-  font-size: xx-large;
+  font-size: 40px;
   text-decoration: underline;
   text-decoration-color: #015990;
 }
 
 #hobbies_nav {
-  font-size: xx-large;
+  font-size: 40px;
 }
 
 #project_nav {
-  font-size: xx-large;
+  font-size: 40px;
 }
 
 html {
@@ -80,7 +80,7 @@ html {
     flex-direction: column;
     line-height: 130%;
     font-size: x-large;
-    margin-left: 10%;
+    margin-left: 9%;
     position: absolute;
     left: 0;
     top: 0;

@@ -1,125 +1,167 @@
 .top_nav {
-    display: flex;
-    font-size: x-large;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 25px;
-    margin: 0px;
-    border-left: 0px;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    width: 100%;
-    text-decoration: none;
-    opacity: 0;
-    animation: fadeIn 1s 0.5s forwards;
-  }
-  
-  .title {
-    text-decoration: none;
-    color: #015990;
-  }
-  
-  .title:hover {
-    text-decoration: underline;
-    color: darkgreen;
-  }
-  
-  #about_nav {
-    font-size: xx-large;
-  }
-  
-  #awards_nav {
-    font-size: xx-large;
-  }
-  
-  #hobbies_nav {
-    font-size: xx-large;
-    text-decoration: underline;
-    text-decoration-color: #015990;
-  }
-  
-  #project_nav {
-    font-size: xx-large;
-  }
+  display: flex;
+  font-size: x-large;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 25px;
+  margin: 0px;
+  border-left: 0px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
+
+.title {
+  text-decoration: none;
+  color: #015990;
+}
+
+.title:hover {
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+#about_nav {
+  font-size: 40px;
+}
+
+#awards_nav {
+  font-size: 40px;
+}
+
+#hobbies_nav {
+  font-size: 40px;
+  text-decoration: underline;
+  text-decoration-color: #015990;
+}
+
+#project_nav {
+  font-size: 40px;
+}
 
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  #background_pic{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-  .content {
-    /* 其他样式 */
-    display: flex;
-    font-size: 25px; /* 修改为适当的字体大小 */
-    margin-top: 7%;
-    color: #000000;
-    background-color: rgba(255, 255, 255, 0.9); /* 白色背景底色，透明度为0.5 */
-    border: 10px solid #78a7f8; /* 黑色边框 */
-    padding-left:2%; /* 向右增加10像素的内边距 */
-    border-radius: 5%;
-    flex-direction: column;
-    line-height: 130%;
-    font-size: x-large;
-    margin-left: 10%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 80%;
-    animation: floatUp 1s forwards;
-  }
-
-  @keyframes floatUp {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  .slideshow-container {
-    position: fixed;
-    margin-top: 12%;
-    float:left;
-    height: 800px;
-    width: 400px;
-  }
-  
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+  from {
     opacity: 0;
-    transition: opacity 1s ease;
   }
-  
-  .slide.active {
+
+  to {
     opacity: 1;
   }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+}
+
+#background_pic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  /* 其他样式 */
+  display: flex;
+  font-size: 25px;
+  /* 修改为适当的字体大小 */
+  margin-top: 7%;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* 白色背景底色，透明度为0.5 */
+  border: 10px solid #78a7f8;
+  /* 黑色边框 */
+  padding-left: 2%;
+  /* 向右增加10像素的内边距 */
+  border-radius: 5%;
+  flex-direction: column;
+  line-height: 130%;
+  font-size: x-large;
+  margin-left: 10%;
+  left: 0;
+  top: 0;
+  width: 80%;
+  animation: floatUp 1s forwards;
+  position: relative;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100%);
   }
 
-  .P1{
-    width: 60%;
-    display: flex;
-    margin-left: 38%;
+  to {
+    transform: translateY(0);
   }
+}
+
+.slideshow-container-1 {
+  position: fixed;
+  float: left;
+  width: 33%;
+  /* 图片宽度为父元素宽度的50% */
+  height: auto;
+  /* 高度根据宽度等比例缩放 */
+  left: 3%;
+  top: 9%;
+}
+
+.slideshow-container-2 {
+  position: fixed;
+  float: left;
+  width: 28%;
+  /* 图片宽度为父元素宽度的50% */
+  /* 高度根据宽度等比例缩放 */
+  left: 66%;
+  top:45%;
+
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.P1 {
+  width: 60%;
+  display: flex;
+  margin-left: 38%;
+  line-height: 150%;
+  margin-top: 3%;
+}
+
+.P2 {
+  display: flex;
+  line-height: 150%;
+  margin-top: 3%;
+}
+
+h1 {
+  margin-top: 3%;
+  margin-left: 1%;
+}
+
+.P3 {
+  width: 60%;
+  display: flex;
+  margin-right: 38%;
+  line-height: 150%;
+  margin-top: 3%;
+}

@@ -27,21 +27,21 @@
 }
 
 #about_nav {
-    font-size: xx-large;
+    font-size: 40px;
     text-decoration: underline;
     text-decoration-color: #015990;
 }
 
 #awards_nav {
-    font-size: xx-large;
+  font-size: 40px;
 }
 
 #hobbies_nav {
-    font-size: xx-large;
+  font-size: 40px;
 }
 
 #project_nav {
-    font-size: xx-large;
+  font-size: 40px;
 }
 
 html, body {
@@ -54,21 +54,18 @@ html, body {
     display: flex;
     width: 500px;
     height: 600px;
-    margin-left: 3%;
-    border-radius: 10%;
+    margin-left: 5%;
     animation: floatUp 1s forwards;
-    margin-top: 12%;
+    margin-top: 7%;
     
   }
 
   #figure_1 {
     display: flex;
-    margin-left: 4.5%;
-    border-radius: 10%;
+    margin-left: 6.5%;
     animation: floatUp 1s forwards;
-    margin-top: 13%;
-    margin-bottom: 1%;
-    
+    margin-top: 10%;
+    margin-bottom: 1%;    
   }
 
 @keyframes floatUp {
@@ -112,7 +109,7 @@ html, body {
     flex-direction: column;
     line-height: 130%;
     font-size: x-large;
-    margin-left: 33%;
+    margin-left: 31%;
     position: absolute;
     left: 0;
     top: 0;
