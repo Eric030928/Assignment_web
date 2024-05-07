@@ -101,23 +101,33 @@
 .slideshow-container-1 {
   position: fixed;
   float: left;
-  width: 33%;
+  width: 26%;
   /* 图片宽度为父元素宽度的50% */
   height: auto;
   /* 高度根据宽度等比例缩放 */
-  left: 3%;
+  left: 7%;
   top: 9%;
 }
 
 .slideshow-container-2 {
   position: fixed;
   float: left;
-  width: 28%;
+  width: 23%;
   /* 图片宽度为父元素宽度的50% */
   /* 高度根据宽度等比例缩放 */
   left: 66%;
-  top:45%;
+  top: 43%;
 
+}
+
+.slideshow-container-3 {
+  position: fixed;
+  float: left;
+  width: 20%;
+  /* 图片宽度为父元素宽度的50% */
+  /* 高度根据宽度等比例缩放 */
+  left: 7%;
+  top: 77%;
 }
 
 .slide {

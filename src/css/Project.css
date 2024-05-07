@@ -18,7 +18,7 @@
 
 .title {
   text-decoration: none;
-  color: #015990;
+  color: #022769;
 }
 
 .title:hover {
@@ -28,8 +28,6 @@
 
 #about_nav {
   font-size: 40px;
-  text-decoration: underline;
-  text-decoration-color: #015990;
 }
 
 #awards_nav {
@@ -42,41 +40,8 @@
 
 #project_nav {
   font-size: 40px;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
-#figure {
-  display: flex;
-  width: 500px;
-  height: 600px;
-  margin-left: 2%;
-  animation: floatUp 1s forwards;
-  margin-top: 7%;
-
-}
-
-#figure_1 {
-  display: flex;
-  margin-left: 4%;
-  animation: floatUp 1s forwards;
-  margin-top: 10%;
-  margin-bottom: 1%;
-}
-
-@keyframes floatUp {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
+  text-decoration: underline;
+  text-decoration-color: #015990;
 }
 
 @keyframes fadeIn {
@@ -98,7 +63,6 @@ body {
   z-index: -1;
 }
 
-
 #content {
   /* 其他样式 */
   display: flex;
@@ -116,16 +80,16 @@ body {
   flex-direction: column;
   line-height: 130%;
   font-size: x-large;
-  margin-left: 31%;
+  margin-left: 9%;
   position: absolute;
   left: 0;
   top: 0;
-  width: 60%;
+  width: 80%;
   float: left;
-  animation: floatUp 1s forwards;
+  animation: floatLeft 1s forwards;
 }
 
-h2 {
+h3 {
   color: #000000;
   margin-left: 1%;
   margin-top: 3%;
@@ -134,7 +98,12 @@ h2 {
 
 }
 
-#name {
-  color: #000;
-  text-emphasis-position: inline;
+@keyframes floatLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
