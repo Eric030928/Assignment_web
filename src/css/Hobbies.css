@@ -44,6 +44,10 @@
   font-size: 40px;
 }
 
+#quiz_nav {
+  font-size: 40px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

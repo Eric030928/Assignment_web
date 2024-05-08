@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 25px;
+  padding: 20px;
   margin: 0px;
   border-left: 0px;
   position: absolute;
@@ -42,6 +42,10 @@
   font-size: 40px;
   text-decoration: underline;
   text-decoration-color: #015990;
+}
+
+#quiz_nav {
+  font-size: 40px;
 }
 
 @keyframes fadeIn {

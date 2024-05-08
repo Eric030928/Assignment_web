@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Quiz.css">
+    <script src="../js/Quiz.js"></script>
+</head>
+
+<body>
+    <div class="top_nav">
+        <strong>
+            <div id="about_nav"><a href="./About.html" class="title">About me</a></div>
+        </strong>
+        <strong>
+            <div id="awards_nav"><a href="./Awards.html" class="title">Awards</a></div>
+        </strong>
+        <strong>
+            <div id="hobbies_nav"><a href="./Hobbies.html" class="title">Hobbies</a></div>
+        </strong>
+        <strong>
+            <div id="project_nav"><a href="./Project.html" class="title">Projects</a></div>
+        </strong>
+        <strong>
+            <div id="quiz_nav"><a href="./Quiz.html" class="title">Quiz</a></div>
+        </strong>
+    </div>
+    <img src="../figures/Project.jpg" alt="" id="background_pic">
+    <main class="content">
+        <section class="s1">
+            <h1 id="introduction_word">Welcome to quiz!
+            </h1>
+            <button id="home_button" onmouseover="learn_hover(this)" onmouseout="learn_hover_out(this)"
+                onclick="openModal();">
+                Let's start it!
+            </button>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Welcome to quiz! Give your
+                        name:</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
