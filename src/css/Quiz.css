@@ -252,6 +252,7 @@
   margin: 7% auto;
   height: auto;
   top: 10%;
+  display: none;
 }
 
 h2{
@@ -271,11 +272,12 @@ h2{
 }
 
 #options_container {
-  margin-left: 6%;
+  margin-left: 4%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 2%;
+  margin-bottom: 0%;
+  display: none;
 }
 
 .option {
@@ -288,12 +290,23 @@ h2{
   padding: 20px;
   width: 20%;
   cursor: pointer;
-  margin-inline: 2%;
+  margin-inline: 1.8%;
   height: auto;
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .selected {
   background-color: blue;
   color: white;
+}
+
+.question_time{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#modal_title_time{
+  margin-right: 5%;
+
 }

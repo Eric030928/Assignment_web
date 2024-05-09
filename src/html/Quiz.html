@@ -39,24 +39,28 @@
 
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <h2 id="modal_title">Welcome to quiz! Give your name:</h2>
-                    <p id="reminder">Reminder: If you close the quiz before you complete it, you will lose the record and all the marks that you obtained!</p>
-                    <form id="name_form" method="post">
-                        <input type="text" id="Name_input" placeholder="Type here!">
-                        <br>
-                        <button type="submit" id="Name_button" onclick="updateModalContent(event)">Submit</button>
-                    </form>
-                    <div id="options_container" style="display: none;">
-                        <button class="option" onclick="selectOption(1)">Option 1</button>
-                        <button class="option" onclick="selectOption(2)">Option 2</button>
-                        <button class="option" onclick="selectOption(3)">Option 3</button>
-                        <button class="option" onclick="selectOption(4)">Option 4</button>
-                    </div>
-                    <button type="submit" id="Name_button_1" onclick="" style="display: none;">Submit</button>
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <div class="question_time">
+                    <h1 id="modal_title_question" style="display: none">Example question:</h1>
+                    <h3 id="modal_title_time" style="display: none"><strong>Time remaining: 15s <em>(The time will keep reducing)</em></strong></h3>
+                  </div>
+                  <h2 id="modal_title">Welcome to quiz! Give your name:</h2>
+                  <p id="reminder">Reminder: If you close the quiz before you complete it, you will lose the record and all the marks that you obtained!</p>
+                  <p id="question" style="display:none">Where is America? <br> <em>(Choose the answer below and click the button to submit your answer)</em></p>
+                  <form id="name_form" method="post">
+                    <input type="text" id="Name_input" placeholder="Type here!">
+                    <br>
+                    <button type="submit" id="Name_button" onclick="updateModalContent(event)">Submit</button>
+                  </form>
+                  <div id="options_container">
+                    <button class="option" onclick="selectOption(1)" id="option_1">A. Asia </button>
+                    <button class="option" onclick="selectOption(2)" id="option_2">B. Europe </button>
+                    <button class="option" onclick="selectOption(3)" id="option_3">C. Africa </button>
+                    <button class="option" onclick="selectOption(4)" id="option_4">D. Pacific </button>
+                  </div>
+                  <button type="submit" id="Name_button_1" onclick="nextQuestion(event)">Continue</button>
                 </div>
-            </div>
-
+              </div>
         </section>
     </main>
 </body>
