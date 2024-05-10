@@ -44,8 +44,9 @@ function updateModalContent(event) {
     var reminder = document.getElementById("reminder");
     reminder.style.display = "none";
     modalTitle.style.margin = "0%";
-    var nextButton = document.getElementById("Name_button_0");
+    var nextButton = document.getElementById("Name_button_1");
     nextButton.style.display = "block";
+    nextButton.innerHTML = "Continue";
   }
 }
 
@@ -117,10 +118,13 @@ var questions = [{
 ];
 
 var count = 0;
-var timeLeft = 20; // 倒计时初始时间
+var timeLeft = 5; // 倒计时初始时间
 var countdownInterval; // 存储setInterval的返回值
+var score = 0;
+var isSubmitted = false; // 添加一个标志，用于检查是否已提交答案
 
 function nextQuestion(event) {
+  if(count < 10){
   var question = document.getElementById("question");
   var selectedOption = null; // 初始化为null
   var modalQuestionTitle = document.getElementById("modal_title_question");
@@ -144,7 +148,7 @@ function nextQuestion(event) {
     // 如果已经有一个倒计时在运行，先清除它
     if (countdownInterval) {
       clearInterval(countdownInterval);
-      timeLeft = 20; // 重置倒计时初始时间
+      timeLeft = 5; // 重置倒计时初始时间
     }
 
     // 更新时间显示
@@ -155,15 +159,19 @@ function nextQuestion(event) {
       timeLeft--; // 时间减少1秒
       modalTimeTitle.innerHTML = "Time remaining: " + timeLeft + "s";
       if (timeLeft <= 0) {
-        // 倒计时结束
-        clearInterval(countdownInterval);
-        // 这里可以添加倒计时结束后的逻辑
+        if (timeLeft <= 0) {
+          clearInterval(countdownInterval);
+          if (!isSubmitted) { // 检查是否已提交答案
+            selectOption = 0;
+          }
+          // 重置提交标志
+          isSubmitted = false;
+        }
       }
     }, 1000);
   }
 
   // 假设有一个按钮，当点击时调用startCountdown函数
-
   startCountdown();
   // 获取用户选择的选项
   var options = document.getElementsByClassName("option");
@@ -180,15 +188,33 @@ function nextQuestion(event) {
   } else {
     var selectedAnswer = selectedOption - 1;
     var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
-    if (count == 1) {
-      correctAnswer = 0;
+    if(count == 1){
+      pass;
     }
-    if (selectedAnswer === correctAnswer) {
+    else if (selectedAnswer === correctAnswer) {
       // 答案正确，弹出正确的模态框
       alert("Your answer is correct");
+      score += 1;
     } else {
       // 答案错误，弹出错误的模态框
       alert("Your answer is wrong");
     }
   }
+}else{
+  if (selectedOption === null) {
+    // 没有选择任何选项，弹出提示
+    alert("请先选择一个选项");
+  } else {
+    var selectedAnswer = selectedOption - 1;
+    var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
+    if (selectedAnswer === correctAnswer) {
+      score += 1;
+      alert("Your answer is correct.\n You completed all the questions!\n You got" + score + " right out of 10.");
+      
+    } else {
+      // 答案错误，弹出错误的模态框
+      alert("Your answer is wrong.\n You completed all the questions!\n You got " + score + " right out of 10.");
+    }
+  }
+}
 }
