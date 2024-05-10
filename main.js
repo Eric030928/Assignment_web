@@ -42,14 +42,5 @@ app.get('/Project', (req, res) => {
 });
 
 app.get('/Quiz', (req, res) => {
-  const quizData = {
-    questionSequence: '1',
-    timeRemaining: 15,
-    questionContent: 'Here is the content of the question',
-    option1: 'Option A',
-    option2: 'Option B',
-    option3: 'Option C',
-    option4: 'Option D'
-  };
-  res.render('Quiz', quizData);
+  res.sendFile(path.join(__dirname, './src/html/Quiz.html'));
 });
