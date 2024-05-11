@@ -1,4 +1,3 @@
-
 function learnHover(obj) {
   obj.innerHTML = "Let's start it! >>";
 }
@@ -154,10 +153,16 @@ function handleTimeout() {
       startCountdown();
     }
   } else {
+
     var endTime = new Date(); // 获取当前时间 第10个问题超时了的逻辑在这里改
     var timeTaken = (endTime - startTime) / 1000; // 计算经过的秒数
+    count += 1;
+    button_1 = document.getElementById("Name_button_1");
+    button_1.innerHTML = "Check the leaderboard";
+    button_1.style.width = "30%";
     alert("Your answer is wrong.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
-  }
+    alert("Completed.")
+    }
 }
 
 function startCountdown() {
@@ -174,9 +179,13 @@ function startCountdown() {
   countdownInterval = setInterval(function () {
     timeLeft--; // 时间减少1秒
     document.getElementById("modal_title_time").innerHTML = "Time remaining: " + timeLeft + "s";
-    if (timeLeft <= 0) {
+    if (count <=10 && timeLeft <= 0) {
       clearInterval(countdownInterval);
       handleTimeout(); // 调用超时处理函数
+    }else{
+      if(count == 11){
+        timeLeft = 0;
+      }
     }
   }, 1000);
 }
@@ -205,40 +214,36 @@ function nextQuestion(event) {
     startCountdown();
     judge();
   } else {
-    if (selectedOption === null) {
-      // 没有选择任何选项，弹出提示
-      alert("请先选择一个选项");
-    } else {
-      var endTime = new Date(); // 获取当前时间
-      var timeTaken = (endTime - startTime) / 1000; // 计算经过的秒数
-      var selectedAnswer = selectedOption - 1;
-      var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
-      if (selectedAnswer === correctAnswer) {
-        score += 1;
-        alert("Your answer is correct.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
-
+    if (count == 10) {
+      if (selectedOption === null) {
+        // 没有选择任何选项，弹出提示
+        alert("请先选择一个选项");
       } else {
-        // 答案错误，弹出错误的模态框
-        alert("Your answer is wrong.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
+        var endTime = new Date(); // 获取当前时间
+        var timeTaken = (endTime - startTime) / 1000; // 计算经过的秒数
+        var selectedAnswer = selectedOption - 1;
+        var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
+        if (selectedAnswer === correctAnswer) { // 第10个问题回答后的代码在这里改
+          score += 1;
+          count += 1;
+          button_1 = document.getElementById("Name_button_1");
+          button_1.innerHTML = "Check the leaderboard";
+          button_1.style.width = "30%";
+          alert("Your answer is correct.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
+          alert("Completed.")
+        } else {
+          // 答案错误，弹出错误的模态框
+          count += 1;
+          button_1 = document.getElementById("Name_button_1");
+          button_1.innerHTML = "Check the leaderboard";
+          button_1.style.width = "30%";
+          alert("Your answer is wrong.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
+          alert("Completed.")
+        }
       }
-    }
-  }
-  if (count == 11) {
-    if (selectedOption === null) {
-      // 没有选择任何选项，弹出提示
-      alert("请先选择一个选项");
-    } else {
-      var selectedAnswer = selectedOption - 1;
-      var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
-      var endTime = new Date(); // 获取当前时间
-      var timeTaken = (endTime - startTime) / 1000; // 计算经过的秒数
-      if (selectedAnswer === correctAnswer) { // 第10个问题回答后的代码在这里改
-        score += 1;
-        alert("Your answer is correct.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
-      } else {
-        // 答案错误，弹出错误的模态框
-        alert("Your answer is wrong.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
-      }
+    }else{//排行榜的显示在这里改
+      alert("time!");
+      
     }
   }
 }
