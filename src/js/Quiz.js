@@ -321,8 +321,19 @@ function nextQuestion(event) {
           // 处理获取到的数据
           var leaderboard_table = document.getElementById('table_1');
           var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
-      
+          
           for (let i = 0; i < data.length; i++) {
+            data.sort(function(a, b) {
+              // 比较finalScore，降序
+              if (parseInt(a.finalScore) > parseInt(b.finalScore)) {
+                  return -1;
+              }
+              if (parseInt(a.finalScore) < parseInt(b.finalScore)) {
+                  return 1;
+              }
+              // 如果finalScore相同，比较finalTime，升序
+              return parseFloat(a.finalTime) - parseFloat(b.finalTime);
+          });
             const userName = data[i].userName;
             const finalScore = data[i].finalScore;
             const finalTime = data[i].finalTime;
@@ -348,8 +359,6 @@ function nextQuestion(event) {
             // 将行添加到表格的 tbody 中
             tbody.appendChild(newRow);
           }
-      
-
         })
   .catch(error => {
     console.error('Failed to fetch leaderboard:', error);
