@@ -280,89 +280,69 @@ function nextQuestion(event) {
           console.error('There has been a problem with your fetch operation:', error);
         });
       // 获取模态框元素
-      var modal = document.getElementById("modal");
-      modal.style.display = "none";
-      var leaderboard_content = document.getElementById("leaderboard");
-      leaderboard_content.style.display = "flex";
-      // 隐藏模态框
-      var leaderboard_table = document.getElementById('table_1');
-      var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
 
-      // 创建新的行
-      var newRow = document.createElement('tr');
+      setTimeout(function () {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+        fetch('/leaderboard', {
+            method: 'GET',
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            // 处理获取到的数据
+            var leaderboard_table = document.getElementById('table_1');
+            var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
 
-      // 创建包含数据的单元格
-      var userNameCell = document.createElement('td');
-      userNameCell.textContent = userName; // 假设 userName 是一个变量，包含要添加的用户名
-
-      var finalScoreCell = document.createElement('td');
-      finalScoreCell.textContent = finalScore; // 假设 finalScore 是一个变量，包含要添加的最终得分
-
-      var finalTimeCell = document.createElement('td');
-      finalTimeCell.textContent = finalTime; // 假设 finalTime 是一个变量，包含要添加的最终时间
-
-      // 将单元格添加到行
-      newRow.appendChild(userNameCell);
-      newRow.appendChild(finalScoreCell);
-      newRow.appendChild(finalTimeCell);
-
-      // 将行添加到表格的 tbody 中
-      tbody.appendChild(newRow);
-      fetch('/leaderboard', {
-        method: 'GET',
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          // 处理获取到的数据
-          var leaderboard_table = document.getElementById('table_1');
-          var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
-          
-          for (let i = 0; i < data.length; i++) {
-            data.sort(function(a, b) {
-              // 比较finalScore，降序
-              if (parseInt(a.finalScore) > parseInt(b.finalScore)) {
+            for (let i = 0; i < data.length; i++) {
+              data.sort(function (a, b) {
+                // 比较finalScore，降序
+                if (parseInt(a.finalScore) > parseInt(b.finalScore)) {
                   return -1;
-              }
-              if (parseInt(a.finalScore) < parseInt(b.finalScore)) {
+                }
+                if (parseInt(a.finalScore) < parseInt(b.finalScore)) {
                   return 1;
-              }
-              // 如果finalScore相同，比较finalTime，升序
-              return parseFloat(a.finalTime) - parseFloat(b.finalTime);
+                }
+                // 如果finalScore相同，比较finalTime，升序
+                return parseFloat(a.finalTime) - parseFloat(b.finalTime);
+              });
+              const userName = data[i].userName;
+              const finalScore = data[i].finalScore;
+              const finalTime = data[i].finalTime;
+
+              // 创建新的行
+              var newRow = document.createElement('tr');
+
+              // 创建包含数据的单元格
+              var userNameCell = document.createElement('td');
+              userNameCell.textContent = userName;
+
+              var finalScoreCell = document.createElement('td');
+              finalScoreCell.textContent = finalScore;
+
+              var finalTimeCell = document.createElement('td');
+              finalTimeCell.textContent = finalTime;
+
+              // 将单元格添加到行
+              newRow.appendChild(userNameCell);
+              newRow.appendChild(finalScoreCell);
+              newRow.appendChild(finalTimeCell);
+
+              // 将行添加到表格的 tbody 中
+              tbody.appendChild(newRow);
+            }
+          })
+          .catch(error => {
+            console.error('Failed to fetch leaderboard:', error);
           });
-            const userName = data[i].userName;
-            const finalScore = data[i].finalScore;
-            const finalTime = data[i].finalTime;
-      
-            // 创建新的行
-            var newRow = document.createElement('tr');
-      
-            // 创建包含数据的单元格
-            var userNameCell = document.createElement('td');
-            userNameCell.textContent = userName;
-      
-            var finalScoreCell = document.createElement('td');
-            finalScoreCell.textContent = finalScore;
-      
-            var finalTimeCell = document.createElement('td');
-            finalTimeCell.textContent = finalTime;
-      
-            // 将单元格添加到行
-            newRow.appendChild(userNameCell);
-            newRow.appendChild(finalScoreCell);
-            newRow.appendChild(finalTimeCell);
-      
-            // 将行添加到表格的 tbody 中
-            tbody.appendChild(newRow);
-          }
-        })
-  .catch(error => {
-    console.error('Failed to fetch leaderboard:', error);
-  });
+        var leaderboard_content = document.getElementById("leaderboard");
+        leaderboard_content.style.display = "flex";
+      }, 200);
+
     }
   }
 
@@ -399,4 +379,10 @@ function nextQuestion(event) {
 
 function hideModal() {
   modal.style.display = "none";
+}
+
+function end(){
+  var leaderboard_content = document.getElementById("leaderboard");
+  leaderboard_content.style.display = "none";
+  location.reload();
 }

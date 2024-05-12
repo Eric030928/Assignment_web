@@ -399,3 +399,24 @@ h1 {
   font-family: Verdana;
   font-weight: bold;
   }
+
+  
+  #Name_button_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0081CF;
+    border: rgb(17, 108, 246);
+    border-radius: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 20%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 7% auto;
+    height: auto;
+    top: 10%;
+    z-index: 7;
+  }
