@@ -250,7 +250,6 @@ function nextQuestion(event) {
       var userName = inputValue;
       var finalScore = score.toString(); // 转换为字符串
       var finalTime = timeUsed.toString(); // 转换为字符串
-      debugger
       // 创建一个包含得分数据的对象
       var scoreData = {
         userName: userName,
@@ -288,28 +287,73 @@ function nextQuestion(event) {
       // 隐藏模态框
       var leaderboard_table = document.getElementById('table_1');
       var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
-      
+
       // 创建新的行
       var newRow = document.createElement('tr');
-      
+
       // 创建包含数据的单元格
       var userNameCell = document.createElement('td');
       userNameCell.textContent = userName; // 假设 userName 是一个变量，包含要添加的用户名
-      
+
       var finalScoreCell = document.createElement('td');
       finalScoreCell.textContent = finalScore; // 假设 finalScore 是一个变量，包含要添加的最终得分
-      
+
       var finalTimeCell = document.createElement('td');
       finalTimeCell.textContent = finalTime; // 假设 finalTime 是一个变量，包含要添加的最终时间
-      
+
       // 将单元格添加到行
       newRow.appendChild(userNameCell);
       newRow.appendChild(finalScoreCell);
       newRow.appendChild(finalTimeCell);
-      
+
       // 将行添加到表格的 tbody 中
       tbody.appendChild(newRow);
+      fetch('/leaderboard', {
+        method: 'GET',
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // 处理获取到的数据
+          var leaderboard_table = document.getElementById('table_1');
+          var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
       
+          for (let i = 0; i < data.length; i++) {
+            const userName = data[i].userName;
+            const finalScore = data[i].finalScore;
+            const finalTime = data[i].finalTime;
+      
+            // 创建新的行
+            var newRow = document.createElement('tr');
+      
+            // 创建包含数据的单元格
+            var userNameCell = document.createElement('td');
+            userNameCell.textContent = userName;
+      
+            var finalScoreCell = document.createElement('td');
+            finalScoreCell.textContent = finalScore;
+      
+            var finalTimeCell = document.createElement('td');
+            finalTimeCell.textContent = finalTime;
+      
+            // 将单元格添加到行
+            newRow.appendChild(userNameCell);
+            newRow.appendChild(finalScoreCell);
+            newRow.appendChild(finalTimeCell);
+      
+            // 将行添加到表格的 tbody 中
+            tbody.appendChild(newRow);
+          }
+      
+
+        })
+  .catch(error => {
+    console.error('Failed to fetch leaderboard:', error);
+  });
     }
   }
 

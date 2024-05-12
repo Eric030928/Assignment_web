@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
-const { log } = require('console');
 const app = express();
 const port = 5500;
 
@@ -77,5 +76,17 @@ app.post('/submit', (req, res) => {
       // 返回成功的响应
       res.status(200).send('Score submitted successfully');
     });
+  });
+});
+
+
+app.get('/leaderboard', (req, res) => {
+  fs.readFile('./src/leaderboard.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Internal Server Error');
+    }
+    const leaderboard = JSON.parse(data) || [];
+    res.json(leaderboard);
   });
 });
