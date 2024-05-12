@@ -123,6 +123,7 @@ var countdownInterval; // 存储setInterval的返回值
 var score = 0;
 var selectedOption = null; // 初始化为null
 var startTime;
+var timeUsed;
 
 var button = document.getElementById('Name_button_1');
 
@@ -162,7 +163,8 @@ function handleTimeout() {
     button_1.style.width = "30%";
     alert("Your answer is wrong.\n You completed all the questions!\n You got " + score + " right out of 10.\n You used " + timeTaken + " s.");
     alert("Completed.")
-    }
+    timeUsed = timeTaken;
+  }
 }
 
 function startCountdown() {
@@ -179,11 +181,11 @@ function startCountdown() {
   countdownInterval = setInterval(function () {
     timeLeft--; // 时间减少1秒
     document.getElementById("modal_title_time").innerHTML = "Time remaining: " + timeLeft + "s";
-    if (count <=10 && timeLeft <= 0) {
+    if (count <= 10 && timeLeft <= 0) {
       clearInterval(countdownInterval);
       handleTimeout(); // 调用超时处理函数
-    }else{
-      if(count == 11){
+    } else {
+      if (count == 11) {
         timeLeft = 0;
       }
     }
@@ -241,39 +243,107 @@ function nextQuestion(event) {
           alert("Completed.")
         }
       }
-    }else{//排行榜的显示在这里改
-      alert("time!");
+      timeUsed = timeTaken;
+    } else { //排行榜的显示在这里改
+      var inputElement = document.getElementById("Name_input");
+      var inputValue = inputElement.value;
+      var userName = inputValue;
+      var finalScore = score.toString(); // 转换为字符串
+      var finalTime = timeUsed.toString(); // 转换为字符串
+      debugger
+      // 创建一个包含得分数据的对象
+      var scoreData = {
+        userName: userName,
+        finalScore: finalScore,
+        finalTime: finalTime
+      };
+
+      // 发送POST请求到服务器
+      fetch('/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(scoreData)
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // 请求成功的处理逻辑
+          console.log(data);
+        })
+        .catch(error => {
+          // 请求失败的处理逻辑
+          console.error('There has been a problem with your fetch operation:', error);
+        });
+      // 获取模态框元素
+      var modal = document.getElementById("modal");
+      modal.style.display = "none";
+      var leaderboard_content = document.getElementById("leaderboard");
+      leaderboard_content.style.display = "flex";
+      // 隐藏模态框
+      var leaderboard_table = document.getElementById('table_1');
+      var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
       
+      // 创建新的行
+      var newRow = document.createElement('tr');
+      
+      // 创建包含数据的单元格
+      var userNameCell = document.createElement('td');
+      userNameCell.textContent = userName; // 假设 userName 是一个变量，包含要添加的用户名
+      
+      var finalScoreCell = document.createElement('td');
+      finalScoreCell.textContent = finalScore; // 假设 finalScore 是一个变量，包含要添加的最终得分
+      
+      var finalTimeCell = document.createElement('td');
+      finalTimeCell.textContent = finalTime; // 假设 finalTime 是一个变量，包含要添加的最终时间
+      
+      // 将单元格添加到行
+      newRow.appendChild(userNameCell);
+      newRow.appendChild(finalScoreCell);
+      newRow.appendChild(finalTimeCell);
+      
+      // 将行添加到表格的 tbody 中
+      tbody.appendChild(newRow);
+      
+    }
+  }
+
+  function judge() {
+    var options = document.getElementsByClassName("option");
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].classList.contains("selected")) {
+        selectedOption = i + 1;
+        break;
+      }
+    }
+
+    if (selectedOption === null) {
+      // 没有选择任何选项，弹出提示
+      alert("请先选择一个选项");
+    } else {
+      var selectedAnswer = selectedOption - 1;
+      var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
+
+      if (count == 1) {
+        startTime = new Date();
+        return;
+      } else if (selectedAnswer === correctAnswer) {
+        // 答案正确，弹出正确的模态框
+        alert("Your answer is correct");
+        score += 1;
+      } else {
+        // 答案错误，弹出错误的模态框
+        alert("Your answer is wrong");
+      }
     }
   }
 }
 
-function judge() {
-  var options = document.getElementsByClassName("option");
-  for (var i = 0; i < options.length; i++) {
-    if (options[i].classList.contains("selected")) {
-      selectedOption = i + 1;
-      break;
-    }
-  }
-
-  if (selectedOption === null) {
-    // 没有选择任何选项，弹出提示
-    alert("请先选择一个选项");
-  } else {
-    var selectedAnswer = selectedOption - 1;
-    var correctAnswer = parseInt(questions[count - 1].correct_index); // 将字符串形式的索引转换为整数
-
-    if (count == 1) {
-      startTime = new Date();
-      return;
-    } else if (selectedAnswer === correctAnswer) {
-      // 答案正确，弹出正确的模态框
-      alert("Your answer is correct");
-      score += 1;
-    } else {
-      // 答案错误，弹出错误的模态框
-      alert("Your answer is wrong");
-    }
-  }
+function hideModal() {
+  modal.style.display = "none";
 }

@@ -144,7 +144,7 @@
   border: 1px solid #888;
   width: 80%;
   border-radius: 30px;
-  
+
 }
 
 .close {
@@ -175,7 +175,7 @@
   flex-direction: row;
   justify-content: space-around;
   margin-left: 25.5%;
-  margin-top:5%;
+  margin-top: 5%;
   height: 50px;
   font-size: 16px;
 
@@ -216,7 +216,7 @@
   top: 10%;
 }
 
-#Name_button_after{
+#Name_button_after {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -275,16 +275,16 @@
   display: none;
 }
 
-h2{
+h2 {
   font-size: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-#reminder{
+#reminder {
   font-family: Arial, Helvetica, sans-serif;
-  text-emphasis:initial;
+  text-emphasis: initial;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -320,17 +320,82 @@ h2{
   color: white;
 }
 
-.question_time{
+.question_time {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#modal_title_time{
+#modal_title_time {
   margin-right: 5%;
 
 }
 
-#leaderboard{
+#leaderboard {
+  /* 其他样式 */
   display: none;
+  font-size: 25px;
+  /* 修改为适当的字体大小 */
+  margin-top: 7%;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 1);
+  /* 白色背景底色，透明度为0.5 */
+  border: 15px solid #78a7f8;
+  /* 黑色边框 */
+  padding: 2%;
+  /* 向右增加10像素的内边距 */
+  border-radius: 30px;
+  flex-direction: column;
+  line-height: 130%;
+  font-size: x-large;
+  margin-left: 7%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  float: left;
+  animation: floatLeft 1s forwards;
 }
+
+
+@keyframes floatLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#table_1 thead th {
+  background-color: rgb(81, 130, 187);
+  color: #fff;
+  border-bottom-width: 0;
+  }
+   
+   
+  /* Column Style */
+#table_1 td {
+  color: #000;
+  }
+  /* Heading and Column Style */
+  #table_1 tr, #table_1 th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(81, 130, 187);
+  }
+   
+   
+  /* Padding and font style */
+#table_1 td, #table_1 th {
+  padding: 5px 10px;
+  font-size: 20px;
+  font-family: Verdana;
+  font-weight: bold;
+  }
