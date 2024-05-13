@@ -1,181 +1,183 @@
+/* Top navigation bar */
 .top_nav {
-  display: flex;
-  font-size: x-large;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 25px;
-  margin: 0px;
-  border-left: 0px;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
-  text-decoration: none;
-  opacity: 0;
-  animation: fadeIn 1s 0.5s forwards;
+  display: flex; /* Displays the elements in a horizontal row */
+  font-size: x-large; /* Sets the font size to extra large */
+  flex-direction: row; /* Arranges the elements in a row */
+  justify-content: space-evenly; /* Distributes the space evenly between the elements */
+  flex-wrap: wrap; /* Allows the elements to wrap to the next row */
+  padding: 25px; /* Adds padding around the elements */
+  margin: 0px; /* Removes margin */
+  border-left: 0px; /* Removes the left border */
+  position: absolute; /* Positions the navigation bar absolutely */
+  left: 0; /* Positions the navigation bar to the left */
+  top: 0px; /* Positions the navigation bar to the top */
+  width: 100%; /* Sets the width to 100% of the container */
+  text-decoration: none; /* Removes text decoration */
+  opacity: 0; /* Sets the initial opacity to 0 */
+  animation: fadeIn 1s 0.5s forwards; /* Applies a fade-in animation */
 }
 
+/* Navigation bar title */
 .title {
-  text-decoration: none;
-  color: #015990;
+  text-decoration: none; /* Removes text decoration */
+  color: #015990; /* Sets the color to a specific shade of blue */
 }
 
 .title:hover {
-  text-decoration: underline;
-  color: darkgreen;
+  text-decoration: underline; /* Adds underline on hover */
+  color: darkgreen; /* Sets the color to dark green on hover */
 }
 
+/* Navigation bar links */
 #about_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #awards_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #hobbies_nav {
-  font-size: 40px;
-  text-decoration: underline;
-  text-decoration-color: #015990;
+  font-size: 40px; /* Sets the font size to 40px */
+  text-decoration: underline; /* Adds underline */
+  text-decoration-color: #015990; /* Sets the underline color to a specific shade of blue */
 }
 
 #project_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #quiz_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0; /* Starts with opacity 0 */
   }
-
   to {
-    opacity: 1;
+    opacity: 1; /* Ends with opacity 1 */
   }
 }
 
+/* Background image */
 #background_pic {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  position: fixed; /* Positions the image fixed on the screen */
+  top: 0; /* Positions the image to the top */
+  left: 0; /* Positions the image to the left */
+  width: 100%; /* Sets the width to 100% of the container */
+  height: 100%; /* Sets the height to 100% of the container */
+  z-index: -1; /* Sets the stack order to be behind other elements */
 }
 
+/* Content container */
 .content {
-  /* 其他样式 */
-  display: flex;
-  font-size: 25px;
-  /* 修改为适当的字体大小 */
-  margin-top: 7%;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.9);
-  /* 白色背景底色，透明度为0.5 */
-  border: 10px solid #78a7f8;
-  border-radius: 30px;
-  /* 黑色边框 */
-  padding-left: 2%;
-  /* 向右增加10像素的内边距 */
-  flex-direction: column;
-  line-height: 130%;
-  font-size: x-large;
-  margin-left: 10%;
-  left: 0;
-  top: 0;
-  width: 80%;
-  animation: floatUp 1s forwards;
-  position: relative;
+  display: flex; /* Displays the container as a flexbox */
+  font-size: 25px; /* Sets the font size to 25px */
+  margin-top: 7%; /* Adds top margin */
+  color: #000000; /* Sets the text color to black */
+  background-color: rgba(255, 255, 255, 0.9); /* Sets the background color with opacity */
+  border: 10px solid #78a7f8; /* Adds a border with a specific color */
+  border-radius: 30px; /* Adds border radius */
+  padding-left: 2%; /* Adds left padding */
+  flex-direction: column; /* Arranges the content in a column */
+  line-height: 130%; /* Sets the line height to 130% */
+  font-size: x-large; /* Sets the font size to extra large */
+  margin-left: 10%; /* Adds left margin */
+  left: 0; /* Positions the container to the left */
+  top: 0; /* Positions the container to the top */
+  width: 80%; /* Sets the width to 80% of the container */
+  animation: floatUp 1s forwards; /* Applies a float-up animation */
+  position: relative; /* Sets the position to relative */
 }
 
+/* Float-up animation */
 @keyframes floatUp {
   from {
-    transform: translateY(100%);
+    transform: translateY(100%); /* Starts with translateY 100% */
   }
-
   to {
-    transform: translateY(0);
+    transform: translateY(0); /* Ends with translateY 0 */
   }
 }
 
+/* Slideshow container 1 */
 .slideshow-container-1 {
-  position: fixed;
-  float: left;
-  width: 26%;
-  /* 图片宽度为父元素宽度的50% */
-  height: auto;
-  /* 高度根据宽度等比例缩放 */
-  left: 7%;
-  top: 9%;
+  position: fixed; /* Positions the container fixed on the screen */
+  float: left; /* Floats the container to the left */
+  width: 26%; /* Sets the width to 26% of the container */
+  height: auto; /* Sets the height to auto */
+  left: 7%; /* Positions the container to the left */
+  top: 9%; /* Positions the container to the top */
 }
 
+/* Slideshow container 2 */
 .slideshow-container-2 {
-  position: fixed;
-  float: left;
-  width: 23%;
-  /* 图片宽度为父元素宽度的50% */
-  /* 高度根据宽度等比例缩放 */
-  left: 66%;
-  top: 43%;
-
+  position: fixed; /* Positions the container fixed on the screen */
+  float: left; /* Floats the container to the left */
+  width: 23%; /* Sets the width to 23% of the container */
+  left: 66%; /* Positions the container to the left */
+  top: 43%; /* Positions the container to the top */
 }
 
+/* Slideshow container 3 */
 .slideshow-container-3 {
-  position: fixed;
-  float: left;
-  width: 20%;
-  /* 图片宽度为父元素宽度的50% */
-  /* 高度根据宽度等比例缩放 */
-  left: 7%;
-  top: 77%;
+  position: fixed; /* Positions the container fixed on the screen */
+  float: left; /* Floats the container to the left */
+  width: 20%; /* Sets the width to 20% of the container */
+  left: 7%; /* Positions the container to the left */
+  top: 77%; /* Positions the container to the top */
 }
 
+/* Slideshow slide */
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease;
+  position: absolute; /* Positions the slide absolutely */
+  top: 0; /* Positions the slide to the top */
+  left: 0; /* Positions the slide to the left */
+  opacity: 0; /* Sets the initial opacity to 0 */
+  transition: opacity 1s ease; /* Adds a transition effect for opacity */
 }
 
+/* Active slide */
 .slide.active {
-  opacity: 1;
+  opacity: 1; /* Sets the opacity to 1 for the active slide */
 }
 
+/* Slide image */
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Sets the width to 100% */
+  height: 100%; /* Sets the height to 100% */
+  object-fit: cover; /* Scales the image while maintaining its aspect ratio */
 }
 
-
+/* Paragraph P1 */
 .P1 {
-  width: 60%;
-  display: flex;
-  margin-left: 38%;
-  line-height: 150%;
-  margin-top: 3%;
+  width: 60%; /* Sets the width to 60% of the container */
+  display: flex; /* Displays the element as a flexbox */
+  margin-left: 38%; /* Adds left margin */
+  line-height: 150%; /* Sets the line height to 150% */
+  margin-top: 3%; /* Adds top margin */
 }
 
+/* Paragraph P2 */
 .P2 {
-  display: flex;
-  line-height: 150%;
-  margin-top: 3%;
+  display: flex; /* Displays the element as a flexbox */
+  line-height: 150%; /* Sets the line height to 150% */
+  margin-top: 3%; /* Adds top margin */
 }
 
+/* Heading h1 */
 h1 {
-  margin-top: 3%;
-  margin-left: 1%;
+  margin-top: 3%; /* Adds top margin */
+  margin-left: 1%; /* Adds left margin */
 }
 
+/* Paragraph P3 */
 .P3 {
-  width: 60%;
-  display: flex;
-  margin-right: 38%;
-  line-height: 150%;
-  margin-top: 3%;
+  width: 60%; /* Sets the width to 60% of the container */
+  display: flex; /* Displays the element as a flexbox */
+  margin-right: 38%; /* Adds right margin */
+  line-height: 150%; /* Sets the line height to 150% */
+  margin-top: 3%; /* Adds top margin */
 }

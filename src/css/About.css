@@ -1,144 +1,132 @@
 .top_nav {
-  display: flex;
-  font-size: x-large;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 25px;
-  margin: 0px;
-  border-left: 0px;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
-  text-decoration: none;
-  opacity: 0;
-  animation: fadeIn 1s 0.5s forwards;
+  display: flex; /* Set display property to flex */
+  font-size: x-large; /* Set font size to x-large */
+  flex-direction: row; /* Set the main axis direction of the flex container to row */
+  justify-content: space-evenly; /* Distribute flex items evenly along the main axis */
+  flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+  padding: 25px; /* Add 25 pixels of padding to all sides of the element */
+  margin: 0px; /* Remove margin from all sides of the element */
+  border-left: 0px; /* Remove left border */
+  position: absolute; /* Set the position of the element to absolute */
+  left: 0; /* Position the element flush against the left edge of its containing element */
+  top: 0px; /* Position the element flush against the top edge of its containing element */
+  width: 100%; /* Set the width of the element to 100% of its containing element */
+  text-decoration: none; /* Remove text decoration such as underline */
+  opacity: 0; /* Set the initial opacity of the element to 0 (fully transparent) */
+  animation: fadeIn 1s 0.5s forwards; /* Apply a fade-in animation with a duration of 1 second and a delay of 0.5 seconds */
 }
-
 .title {
-  text-decoration: none;
-  color: #015990;
+  text-decoration: none; /* Remove text decoration such as underline */
+  color: #015990; /* Set the color of the text to #015990 */
 }
 
 .title:hover {
-  text-decoration: underline;
-  color: darkgreen;
+  text-decoration: underline; /* Add underline text decoration on hover */
+  color: darkgreen; /* Change the color of the text to darkgreen on hover */
 }
 
 #about_nav {
-  font-size: 40px;
-  text-decoration: underline;
-  text-decoration-color: #015990;
+  font-size: 40px; /* Set the font size to 40 pixels */
+  text-decoration: underline; /* Add underline text decoration */
+  text-decoration-color: #015990; /* Set the color of the underline to #015990 */
 }
 
 #awards_nav {
-  font-size: 40px;
+  font-size: 40px; /* Set the font size to 40 pixels */
 }
 
 #hobbies_nav {
-  font-size: 40px;
+  font-size: 40px; /* Set the font size to 40 pixels */
 }
 
 #project_nav {
-  font-size: 40px;
+  font-size: 40px; /* Set the font size to 40 pixels */
 }
 
 #quiz_nav {
-  font-size: 40px;
+  font-size: 40px; /* Set the font size to 40 pixels */
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Remove margin from the body and html elements */
+  padding: 0; /* Remove padding from the body and html elements */
 }
 
-
 #figure {
-  display: flex;
-  width: 500px;
-  height: 600px;
-  margin-left: 2%;
-  animation: floatUp 1s forwards;
-  margin-top: 7%;
-
+  display: flex; /* Set the element to use flexbox layout */
+  width: 500px; /* Set the width of the element to 500 pixels */
+  height: 600px; /* Set the height of the element to 600 pixels */
+  margin-left: 2%; /* Set 2% left margin */
+  animation: floatUp 1s forwards; /* Apply the floatUp animation with a duration of 1 second */
+  margin-top: 7%; /* Set 7% top margin */
 }
 
 #figure_1 {
-  display: flex;
-  margin-left: 4%;
-  animation: floatUp 1s forwards;
-  margin-top: 10%;
-  margin-bottom: 1%;
+  display: flex; /* Set the element to use flexbox layout */
+  margin-left: 4%; /* Set 4% left margin */
+  animation: floatUp 1s forwards; /* Apply the floatUp animation with a duration of 1 second */
+  margin-top: 10%; /* Set 10% top margin */
+  margin-bottom: 1%; /* Set 1% bottom margin */
 }
 
 @keyframes floatUp {
   from {
-    transform: translateY(100%);
+    transform: translateY(100%); /* Move the element 100% of its height downward */
   }
 
   to {
-    transform: translateY(0);
+    transform: translateY(0); /* Reset the transform to its original position */
   }
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0; /* Set the initial opacity to 0 (fully transparent) */
   }
 
   to {
-    opacity: 1;
+    opacity: 1; /* Set the final opacity to 1 (fully opaque) */
   }
 }
 
 #background_pic {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  position: fixed; /* Set the position of the element to fixed */
+  top: 0; /* Position the element flush against the top edge of the viewport */
+  left: 0; /* Position the element flush against the left edge of the viewport */
+  width: 100%; /* Set the width of the element to 100% of the viewport width */
+  height: 100%; /* Set the height of the element to 100% of the viewport height */
+  z-index: -1; /* Set the z-index to -1 to position it behind other elements */
 }
 
-
 #content {
-  /* 其他样式 */
-  display: flex;
-  font-size: 25px;
-  /* 修改为适当的字体大小 */
-  margin-top: 7%;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 0.9);
-  /* 白色背景底色，透明度为0.5 */
-  border: 10px solid #78a7f8;
-  /* 黑色边框 */
-  padding-left: 2%;
-  /* 向右增加10像素的内边距 */
-  border-radius: 5%;
-  flex-direction: column;
-  line-height: 130%;
-  font-size: x-large;
-  margin-left: 31%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 60%;
-  float: left;
-  animation: floatUp 1s forwards;
+  display: flex; /* Set the element to use flexbox layout */
+  font-size: 25px; /* Set the font size to 25 pixels */
+  margin-top: 7%; /* Set 7% top margin */
+  color: #000000; /* Set the text color to #000000 (black) */
+  background-color: rgba(255, 255, 255, 0.9); /* Set the background color to a semi-transparent white */
+  border: 10px solid #78a7f8; /* Set a 10px solid border with color #78a7f8 */
+  padding-left: 2%; /* Set 2% left padding */
+  border-radius: 5%; /* Set a border radius of 5% */
+  flex-direction: column; /* Set the flex direction to column */
+  line-height: 130%; /* Set the line height to 130% */
+  font-size: x-large; /* Set the font size to x-large */
+  margin-left: 31%; /* Set 31% left margin */
+  position: absolute; /* Set the position of the element to absolute */
+  left: 0; /* Position the element flush against the left edge of its containing element */
+  top: 0; /* Position the element flush against the top edge of its containing element */
+  width: 60%; /* Set the width of the element to 60% of its containing element */
+  float: left; /* Float the element to the left */
+  animation: floatUp 1s forwards; /* Apply the floatUp animation with a duration of 1 second */
 }
 
 h2 {
-  color: #000000;
-  margin-left: 1%;
-  margin-top: 3%;
-  border: 0%;
-  margin-bottom: 0;
-
+  color: #000000; /* Set the text color to #000000 (black) */
+  margin-left: 1%; /* Set 1% left margin */
+  margin-top: 3%; /* Set 3% top margin */
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 #name {
-  color: #000;
-  text-emphasis-position: inline;
+  color: #000; /* Set the text color to #000000 (black) */
 }

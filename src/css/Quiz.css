@@ -1,323 +1,318 @@
+/* Top navigation bar */
 .top_nav {
-  display: flex;
-  font-size: x-large;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 20px;
-  margin: 0px;
-  border-left: 0px;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
-  text-decoration: none;
-  opacity: 0;
-  animation: fadeIn 1s 0.5s forwards;
+  display: flex; /* Displays the elements in a horizontal row */
+  font-size: x-large; /* Sets the font size to extra large */
+  flex-direction: row; /* Arranges the elements in a row */
+  justify-content: space-evenly; /* Distributes the space evenly between the elements */
+  flex-wrap: wrap; /* Allows the elements to wrap to the next row */
+  padding: 20px; /* Adds padding around the elements */
+  margin: 0px; /* Removes margin */
+  border-left: 0px; /* Removes the left border */
+  position: absolute; /* Positions the navigation bar absolutely */
+  left: 0; /* Positions the navigation bar to the left */
+  top: 0px; /* Positions the navigation bar to the top */
+  width: 100%; /* Sets the width to 100% of the container */
+  text-decoration: none; /* Removes text decoration */
+  opacity: 0; /* Sets the initial opacity to 0 */
+  animation: fadeIn 1s 0.5s forwards; /* Applies a fade-in animation */
 }
 
+/* Navigation bar title */
 .title {
-  text-decoration: none;
-  color: #022769;
+  text-decoration: none; /* Removes text decoration */
+  color: #022769; /* Sets the color to a specific shade of blue */
 }
 
 .title:hover {
-  text-decoration: underline;
-  color: darkgreen;
+  text-decoration: underline; /* Adds underline on hover */
+  color: darkgreen; /* Sets the color to dark green on hover */
 }
 
+/* Navigation bar links */
 #about_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #awards_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #hobbies_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #project_nav {
-  font-size: 40px;
+  font-size: 40px; /* Sets the font size to 40px */
 }
 
 #quiz_nav {
-  font-size: 40px;
-  text-decoration: underline;
-  text-decoration-color: #015990;
+  font-size: 40px; /* Sets the font size to 40px */
+  text-decoration: underline; /* Adds underline */
+  text-decoration-color: #015990; /* Sets the underline color to a specific shade of blue */
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0; /* Starts with opacity 0 */
   }
-
   to {
-    opacity: 1;
+    opacity: 1; /* Ends with opacity 1 */
   }
 }
 
+/* Background image */
 #background_pic {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  position: fixed; /* Positions the image fixed on the screen */
+  top: 0; /* Positions the image to the top */
+  left: 0; /* Positions the image to the left */
+  width: 100%; /* Sets the width to 100% of the container */
+  height: 100%; /* Sets the height to 100% of the container */
+  z-index: -1; /* Sets the stack order to be behind other elements */
 }
 
+/* Introduction word */
 #introduction_word {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 100px;
-  margin-top: 13%;
-  margin-bottom: 5%;
-  flex-wrap: wrap;
-  animation-duration: 2s;
-  color: #fafafa;
-  animation-name: slide;
+  display: flex; /* Displays the elements in a horizontal row */
+  flex-direction: row; /* Arranges the elements in a row */
+  justify-content: space-evenly; /* Distributes the space evenly between the elements */
+  font-family: 'Times New Roman', Times, serif; /* Sets the font family */
+  font-size: 100px; /* Sets the font size to 100px */
+  margin-top: 13%; /* Adds top margin */
+  margin-bottom: 5%; /* Adds bottom margin */
+  flex-wrap: wrap; /* Allows the elements to wrap to the next row */
+  animation-duration: 2s; /* Sets the duration of the animation */
+  color: #fafafa; /* Sets the text color */
+  animation-name: slide; /* Applies a slide animation */
 }
 
+/* Home button */
 #home_button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #0081CF;
-  border: rgb(17, 108, 246);
-  border-radius: 30px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 300px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 10px auto;
+  display: flex; /* Displays the button as a flexbox */
+  flex-direction: row; /* Arranges the button in a row */
+  justify-content: space-around; /* Distributes the space evenly between the elements */
+  background-color: #0081CF; /* Sets the background color */
+  border: rgb(17, 108, 246); /* Sets the border color */
+  border-radius: 30px; /* Sets the border radius */
+  color: #FFFFFF; /* Sets the text color */
+  text-align: center; /* Centers the text */
+  font-size: 28px; /* Sets the font size to 28px */
+  padding: 20px; /* Adds padding */
+  width: 300px; /* Sets the width to 300px */
+  transition: all 0.5s; /* Adds a transition effect */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  margin: 10px auto; /* Adds margin */
 }
 
+/* Slide animation */
 @keyframes slide {
   from {
-    margin-bottom: 100%;
-    width: 300%;
+    margin-bottom: 100%; /* Starts with a margin-bottom of 100% */
+    width: 300%; /* Starts with a width of 300% */
   }
-
   to {
-    margin-left: 0%;
-    width: 100%;
+    margin-left: 0%; /* Ends with a margin-left of 0% */
+    width: 100%; /* Ends with a width of 100% */
   }
 }
 
 #button_link {
-  text-decoration: none;
+  text-decoration: none; /* Removes underline from links */
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Position the modal relative to the browser window */
+  z-index: 1; /* Set a high z-index to ensure the modal appears on top of other elements */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  animation: show 1s forwards;
+  overflow: auto; /* Enable scrolling if the content is larger than the modal */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  animation: show 1s forwards; /* Apply the "show" animation with a duration of 1 second */
 }
 
 @keyframes show {
   from {
-    opacity: 0;
+    opacity: 0; /* Start the animation with 0 opacity (invisible) */
   }
 
   to {
-    opacity: 1;
+    opacity: 1; /* End the animation with 1 opacity (fully visible) */
   }
 }
 
 .modal-content {
-  background-color: #b0cde6;
-  margin: 10% auto;
+  background-color: #b0cde6; /* Background color of the modal content */
+  margin: 10% auto; /* Center the modal vertically and horizontally */
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 30px;
-
+  border: 1px solid #888; /* Border around the modal content */
+  width: 80%; /* Width of the modal content */
+  border-radius: 30px; /* Rounded corners for the modal content */
 }
 
 .close {
-  color: #aaa;
-  float: right;
+  color: #aaa; /* Color of the close button */
+  float: right; /* Position the close button to the right */
   font-size: 28px;
   font-weight: bold;
-  cursor: pointer;
+  cursor: pointer; /* Change the cursor to a pointer on hover */
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
+  color: black; /* Change the color of the close button on hover/focus */
+  text-decoration: none; /* Remove underline on hover/focus */
   cursor: pointer;
 }
 
 #Name_input {
-  outline-style: none;
-  border: 1px solid #c0c4cc;
-  border-radius: 5px;
-  width: 50%;
+  outline-style: none; /* Remove the outline when the input is focused */
+  border: 1px solid #c0c4cc; /* Border around the input */
+  border-radius: 5px; /* Rounded corners for the input */
+  width: 50%; /* Width of the input */
   height: 100%;
   padding: 0;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  font-family: "Microsoft soft";
+  padding: 10px 15px; /* Padding inside the input */
+  box-sizing: border-box; /* Include padding and border in the input's total width */
+  font-family: "Microsoft soft"; /* Font family for the input */
   flex-direction: row;
   justify-content: space-around;
-  margin-left: 25.5%;
-  margin-top: 5%;
-  height: 50px;
-  font-size: 16px;
-
-  &:focus {
-    border-color: #004cf0;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      #0438b3;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      #004cf0;
-  }
+  margin-left: 25.5%; /* Margin on the left side of the input */
+  margin-top: 5%; /* Margin on the top of the input */
+  height: 50px; /* Height of the input */
+  font-size: 16px; /* Font size of the input text */
 }
 
 #Name_input::placeholder {
-  font-weight: bold;
-  font-size: x-large;
-  color: black;
-  opacity: 0.3;
+  font-weight: bold; /* Font weight of the input placeholder text */
+  font-size: x-large; /* Font size of the input placeholder text */
+  color: black; /* Color of the input placeholder text */
+  opacity: 0.3; /* Opacity of the input placeholder text */
 }
-
 
 #Name_button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #0081CF;
-  border: rgb(17, 108, 246);
-  border-radius: 30px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 20%;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 7% auto;
-  height: auto;
-  top: 10%;
+  background-color: #0081CF; /* Background color of the button */
+  border: rgb(17, 108, 246); /* Border around the button */
+  border-radius: 30px; /* Rounded corners for the button */
+  color: #FFFFFF; /* Text color of the button */
+  text-align: center; /* Center the button text */
+  font-size: 20px; /* Font size of the button text */
+  padding: 20px; /* Padding inside the button */
+  width: 20%; /* Width of the button */
+  transition: all 0.5s; /* Apply a smooth transition to all CSS properties with a duration of 0.5 seconds */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  margin: 7% auto; /* Center the button vertically and horizontally */
+  height: auto; /* Automatically adjust the height of the button */
+  top: 10%; /* Position the button 10% from the top of the parent element */
 }
 
 #Name_button_after {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #0081CF;
-  border: rgb(17, 108, 246);
-  border-radius: 30px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 20%;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 7% auto;
-  height: auto;
-  top: 10%;
+  background-color: #0081CF; /* Background color of the button */
+  border: rgb(17, 108, 246); /* Border around the button */
+  border-radius: 30px; /* Rounded corners for the button */
+  color: #FFFFFF; /* Text color of the button */
+  text-align: center; /*Center the button text */
+  font-size: 20px; /* Font size of the button text */
+  padding: 20px; /* Padding inside the button */
+  width: 20%; /* Width of the button */
+  transition: all 0.5s; /* Apply a smooth transition to all CSS properties with a duration of 0.5 seconds */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  margin: 7% auto; /* Center the button vertically and horizontally */
+  height: auto; /* Automatically adjust the height of the button */
+  top: 10%; /* Position the button 10% from the top of the parent element */
 }
 
 #Name_button_0 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #0081CF;
-  border: rgb(17, 108, 246);
-  border-radius: 30px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 20%;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 7% auto;
-  height: auto;
-  top: 10%;
-  display: none;
+  background-color: #0081CF; /* Background color of the button */
+  border: rgb(17, 108, 246); /* Border around the button */
+  border-radius: 30px; /* Rounded corners for the button */
+  color: #FFFFFF; /* Text color of the button */
+  text-align: center; /* Center the button text */
+  font-size: 20px; /* Font size of the button text */
+  padding: 20px; /* Padding inside the button */
+  width: 20%; /* Width of the button */
+  transition: all 0.5s; /* Apply a smooth transition to all CSS properties with a duration of 0.5 seconds */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  margin: 7% auto; /* Center the button vertically and horizontally */
+  height: auto; /* Automatically adjust the height of the button */
+  top: 10%; /* Position the button 10% from the top of the parent element */
+  display: none; /* Initially hide the button */
 }
 
 #Name_button_1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #0081CF;
-  border: rgb(17, 108, 246);
-  border-radius: 30px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 20%;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 7% auto;
-  height: auto;
-  top: 10%;
-  display: none;
+  background-color: #0081CF; /* Background color of the button */
+  border: rgb(17, 108, 246); /* Border around the button */
+  border-radius: 30px; /* Rounded corners for the button */
+  color: #FFFFFF; /* Text color of the button */
+  text-align: center; /* Center the button text */
+  font-size: 20px; /* Font size of the button text */
+  padding: 20px; /* Padding inside the button */
+  width: 20%; /* Width of the button */
+  transition: all 0.5s; /* Apply a smooth transition to all CSS properties with a duration of 0.5 seconds */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  margin: 7% auto; /* Center the button vertically and horizontally */
+  height: auto; /* Automatically adjust the height of the button */
+  top: 10%; /* Position the button 10% from the top of the parent element */
+  display: none; /* Initially hide the button */
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 50px; /* Font size of the heading */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 #reminder {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* Font family for the reminder text */
   text-emphasis: initial;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color: red;
+  color: red; /* Color of the reminder text */
 }
 
 #options_container {
-  margin-left: 4%;
+  margin-left: 4%; /* Left margin of the options container */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 0%;
-  display: none;
+  display: none; /* Initially hide the options container */
 }
 
 .option {
-  background-color: #5bc0ff;
-  border: rgb(77, 148, 255);
-  border-radius: 10px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 20%;
-  cursor: pointer;
-  margin-inline: 1.8%;
-  height: auto;
-  margin-top: 7%;
+  background-color: #5bc0ff; /* Background color of the option */
+  border: rgb(77, 148, 255); /* Border around the option */
+  border-radius: 10px; /* Rounded corners for the option */
+  color: #FFFFFF; /* Text color of the option */
+  text-align: center; /* Center the option text */
+  font-size: 20px; /* Font size of the option text */
+  padding: 20px; /* Padding inside the option */
+  width: 20%; /* Width of the option */
+  cursor: pointer; /* Change the cursor to a pointer */
+  margin-inline: 1.8%; /* Horizontal margin between options */
+  height: auto; /* Automatically adjust the height of the option */
+  margin-top: 7%; /* Top margin of the option */
 }
 
 .selected {
-  background-color: blue;
-  color: white;
+  background-color: blue; /* Background color of the selected option */
+  color: white; /* Text color of the selected option */
 }
 
 .question_time {
@@ -327,96 +322,93 @@ h2 {
 }
 
 #modal_title_time {
-  margin-right: 5%;
-
+  margin-right: 5%; /* Right margin of the modal title */
 }
 
+/* Styles for the leaderboard section */
 #leaderboard {
-  /* 其他样式 */
-  display: none;
-  font-size: 25px;
-  /* 修改为适当的字体大小 */
-  margin-top: 7%;
-  color: #000000;
-  background-color: rgba(255, 255, 255, 1);
-  /* 白色背景底色，透明度为0.5 */
-  border: 15px solid #78a7f8;
-  /* 黑色边框 */
-  padding: 2%;
-  /* 向右增加10像素的内边距 */
-  border-radius: 30px;
-  flex-direction: column;
-  line-height: 130%;
-  font-size: x-large;
-  margin-left: 7%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 80%;
-  float: left;
-  animation: floatLeft 1s forwards;
+  display: none; /* Hide the leaderboard by default */
+  font-size: 25px; /* Set the font size to 25 pixels */
+  margin-top: 7%; /* Set the top margin to 7% of the parent element's height */
+  color: #000000; /* Set the text color to black */
+  background-color: rgba(255, 255, 255, 1); /* Set the background color to white */
+  border: 15px solid #78a7f8; /* Set a solid border with a width of 15 pixels and color #78a7f8 */
+  padding: 2%; /* Set the padding to 2% of the element's width */
+  border-radius: 30px; /* Set the border radius to create rounded corners */
+  flex-direction: column; /* Set the flex direction to column */
+  line-height: 130%; /* Set the line height to 130% of the element's font size */
+  font-size: x-large; /* Set the font size to x-large */
+  margin-left: 7%; /* Set the left margin to 7% of the parent element's width */
+  position: absolute; /* Position the element absolutely */
+  left: 0; /* Position the element flush with the left edge of its nearest positioned ancestor */
+  top: 0; /* Position the element flush with the top edge of its nearest positioned ancestor */
+  width: 80%; /* Set the width to 80% of the parent element's width */
+  float: left; /* Float the element to the left */
+  animation: floatLeft 1s forwards; /* Apply the floatLeft animation with a duration of 1 second */
 }
 
-
+/* Animation keyframes for the floatLeft animation */
 @keyframes floatLeft {
   from {
-    transform: translateX(100%);
+    transform: translateX(100%); /* Move the element 100% of its own width to the right */
   }
 
   to {
-    transform: translateX(0);
+    transform: translateX(0); /* Move the element back to its original position */
   }
 }
 
+/* Styles for the h1 element */
 h1 {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Set the display property to flex */
+  justify-content: center; /* Center the content horizontally */
 }
 
+/* Styles for the table header */
 #table_1 thead th {
-  background-color: rgb(81, 130, 187);
-  color: #fff;
-  border-bottom-width: 0;
-  }
-   
-   
-  /* Column Style */
-#table_1 td {
-  color: #000;
-  }
-  /* Heading and Column Style */
-  #table_1 tr, #table_1 th {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(81, 130, 187);
-  }
-   
-   
-  /* Padding and font style */
-#table_1 td, #table_1 th {
-  padding: 5px 10px;
-  font-size: 20px;
-  font-family: Verdana;
-  font-weight: bold;
-  }
+  background-color: rgb(81, 130, 187); /* Set the background color to rgb(81, 130, 187) */
+  color: #fff; /* Set the text color to white */
+  border-bottom-width: 0; /* Set the bottom border width to 0 */
+}
 
-  
-  #Name_button_2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #0081CF;
-    border: rgb(17, 108, 246);
-    border-radius: 30px;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 20px;
-    padding: 20px;
-    width: 20%;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 7% auto;
-    height: auto;
-    top: 10%;
-    z-index: 7;
-  }
+/* Styles for table cells */
+#table_1 td {
+  color: #000; /* Set the text color to black */
+}
+
+/* Styles for table rows and header cells */
+#table_1 tr,
+#table_1 th {
+  border-width: 1px; /* Set the border width to 1 pixel */
+  border-style: solid; /* Set the border style to solid */
+  border-color: rgb(81, 130, 187); /* Set the border color to rgb(81, 130, 187) */
+}
+
+/* Padding and font styles for table cells and header cells */
+#table_1 td,
+#table_1 th {
+  padding: 5px 10px; /* Set the padding to 5 pixels top/bottom and 10 pixels left/right */
+  font-size: 20px; /* Set the font size to 20 pixels */
+  font-family: Verdana; /* Set the font family to Verdana */
+  font-weight: bold; /* Set the font weight to bold */
+}
+
+/* Styles for the Name_button_2 element */
+#Name_button_2 {
+  display: flex; /* Set the display property to flex */
+  flex-direction: row; /* Set the flex direction to row */
+  justify-content: space-around; /* Distribute the content evenly along the horizontal axis */
+  background-color: #0081CF; /* Set the background color to #0081CF */
+  border: rgb(17, 108, 246); /* Set the border color to rgb(17, 108, 246) */
+  border-radius: 30px; /* Set the border radius to create rounded corners */
+  color: #FFFFFF; /* Set the text color to white */
+  text-align: center; /* Center the text horizontally */
+  font-size: 20px; /* Set the font size to 20 pixels */
+  padding: 20px; /* Set the padding to 20 pixels */
+  width: 20%; /* Set the width to 20% of the parent element's width */
+  transition: all 0.5s; /* Apply a transition effect to all CSS properties with a duration of 0.5 seconds */
+  cursor: pointer;margin: 7% auto; /* Set the top margin to 7% and auto for left and right margins */
+  height: auto; /* Set the height to auto */
+  top: 10%; /* Set the top position to 10% of the parent element's height */
+  z-index: 7; /* Set the stacking order of the element */
+}

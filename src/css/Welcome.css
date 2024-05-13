@@ -1,79 +1,86 @@
+/* Styles for the introduction_word section */
 #introduction_word {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 100px;
-    margin-top: 13%;
-    margin-bottom: 5%;
-    flex-wrap: wrap;
-    animation-duration: 2s;
-    color: #fafafa;
-    animation-name: slide;
+    display: flex; /* Set the display property to flex */
+    flex-direction: row; /* Set the flex direction to row */
+    justify-content: space-evenly; /* Distribute the content evenly along the horizontal axis */
+    font-family: 'Times New Roman', Times, serif; /* Set the font family */
+    font-size: 100px; /* Set the font size to 100 pixels */
+    margin-top: 13%; /* Set the top margin to 13% of the parent element's height */
+    margin-bottom: 5%; /* Set the bottom margin to 5% of the parent element's height */
+    flex-wrap: wrap; /* Allow the content to wrap to the next line if needed */
+    animation-duration: 2s; /* Set the duration of the animation to 2 seconds */
+    color: #fafafa; /* Set the text color to #fafafa */
+    animation-name: slide; /* Apply the slide animation */
 }
 
+/* Styles for the .main class */
 .main {
-    background-color: #0b5776;
+    background-color: #0b5776; /* Set the background color to #0b5776 */
 }
 
+/* Styles for the home_button element */
 #home_button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #0081CF;
-    border: rgb(17, 108, 246);
-    border-radius: 30px;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 300px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 10px auto;
+    display: flex; /* Set the display property to flex */
+    flex-direction: row; /* Set the flex direction to row */
+    justify-content: space-around; /* Distribute the content evenly along the horizontal axis */
+    background-color: #0081CF; /* Set the background color to #0081CF */
+    border: rgb(17, 108, 246); /* Set the border color to rgb(17, 108, 246) */
+    border-radius: 30px; /* Set the border radius to create rounded corners */
+    color: #FFFFFF; /* Set the text color to white */
+    text-align: center; /* Center the text horizontally */
+    font-size: 28px; /* Set the font size to 28 pixels */
+    padding: 20px; /* Set the padding to 20 pixels */
+    width: 300px; /* Set the width to 300 pixels */
+    transition: all 0.5s; /* Apply a transition effect to all CSS properties with a duration of 0.5 seconds */
+    cursor: pointer; /* Set the cursor to a pointer */
+    margin: 10px auto; /* Set the top and bottom margin to 10 pixels and auto for left and right margins */
 }
 
+/* Styles for the button_link element */
 #button_link {
-    text-decoration: none;
+    text-decoration: none; /* Remove text decoration */
 }
 
-
+/* Animation keyframes for the slide animation */
 @keyframes slide {
     from {
-        margin-bottom: 100%;
-        width: 300%;
+        margin-bottom: 100%; /* Start the animation with a margin-bottom value of 100% */
+        width: 300%; /* Start the animation with a width value of 300% */
     }
 
     to {
-        margin-left: 0%;
-        width: 100%;
+        margin-left: 0%; /* Move the element to the left */
+        width: 100%; /* Set the width to 100% */
     }
 }
 
+/* Animation keyframes for the fadeIn animation */
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0; /* Start the animation with an opacity of 0 */
     }
 
     to {
-        opacity: 1;
+        opacity: 1; /* Fade in the element with an opacity of 1 */
     }
 }
 
+/* Styles for the video-background section */
 #video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    position: fixed; /* Position the element fixed */
+    top: 0; /* Position the element flush with the top edge of the viewport */
+    left: 0; /* Position the element flush with the left edge of the viewport */
+    width: 100%; /* Set the width to 100% of the viewport width */
+    height: 100%; /* Set the height to 100% of the viewport height */
+    z-index: -1; /* Set the stacking order of the element to be behind other elements */
 }
 
+/* Styles for the video element within the video-background section */
 #video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%; /* Set the width to 100% of the parent element's width */
+    height: 100%; /* Set the height to 100% of the parent element's height */
+    object-fit: cover; /* Scale the video to cover the entire container while maintaining its aspect ratio */
+    position: absolute; /* Position the video absolutely */
+    top: 0; /* Position the video flush with the top edge of the parent element */
+    left: 0; /* Position the video flush with the left edge of the parent element */
 }

@@ -6,45 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My profile</title>
   <link rel="stylesheet" href="../css/About.css">
-
+  <script src="../js/Profile.js"></script>
 </head>
 
 <body>
   <header>
-    <div class="top_nav">
-      <strong>
-        <div id="about_nav"><a href="./About.html" class="title">About me</a></div>
-      </strong>
-      <strong>
-        <div id="awards_nav"><a href="./Awards.html" class="title">Awards</a></div>
-      </strong>
-      <strong>
-        <div id="hobbies_nav"><a href="./Hobbies.html" class="title">Hobbies</a></div>
-      </strong>
-      <strong>
-        <div id="project_nav"><a href="./Project.html" class="title">Projects</a></div>
-      </strong>
-      <strong>
-        <div id="quiz_nav"><a href="./Quiz.html" class="title">Quiz</a></div>
-    </strong>
-    </div>
+    <nav class="top_nav">
+      <div id="about_nav"><a href="./About.html" class="title"><strong>About me</strong></a></div>
+      <div id="awards_nav"><a href="./Awards.html" class="title"><strong>Awards</strong></a></div>
+      <div id="hobbies_nav"><a href="./Hobbies.html" class="title"><strong>Hobbies</strong></a></div>
+      <div id="project_nav"><a href="./Project.html" class="title"><strong>Projects</strong></a></div>
+      <div id="quiz_nav"><a href="./Quiz.html" class="title"><strong>Quiz</strong></a></div>
+    </nav>
   </header>
+
   <main>
-    <img src="../figures/mountains.jpg" alt="" id="background_pic">
-    <section id="figure_1">
-      <img src="../figures/Profile.JPG" alt="">
-    </section>
-    <section id="figure">
-      <img src="../figures/About.JPG" alt="">
-    </section>
+    <figure>
+      <img src="../figures/mountains.jpg" alt="" id="background_pic">
+    </figure>
+
+    <div id="Profile_photo">
+      <div id="figure_1">
+        <img src="../figures/Profile.JPG" alt="">
+      </div>
+      <div id="figure">
+        <img src="../figures/About.JPG" alt="">
+      </div>
+    </div>
+
     <div id="content">
-      <h2><strong> Basic introduction</strong>
-      </h2>
-      <p>
-        Hi! Here is <strong id="name">Zhan Shiquan</strong>. <br>
-        I am 20 years old and I am form Shenzhen, China. <br>
-        I am an undergraduate majoring in Software Engineering<br> at South of China Normal University
-        and Aberdeen University (Combined degrees).<br>
+      <article>
+        <h2><strong> Basic introduction</strong>
+        </h2>
+        <p>
+          Hi! Here is <strong id="name">Zhan Shiquan</strong>. <br>
+          I am 20 years old and I am form Shenzhen, China. <br>
+          I am an undergraduate majoring in Software Engineering<br> at South of China Normal University
+          and Aberdeen University (Combined degrees).<br>
+        </p>
+      </article>
+
+      <article>
         <h2><strong> Academic Background</strong>
         </h2>
         <ul>
@@ -54,6 +56,9 @@
           <li><strong>Course:</strong> Database principles and management systems、Operating system principle、Computer
             network、Data structures and algorithms</li>
         </ul>
+      </article>
+
+      <article>
         <h2><strong>Services</strong>
         </h2>
         <ul>
@@ -72,6 +77,9 @@
             <em>Responsible for the assistance of the construction of new class.</em>
           </li>
         </ul>
+      </article>
+
+      <article>
         <h2><strong>Certificates</strong>
         </h2>
         <ul>
@@ -90,10 +98,14 @@
         </ul>
         <p>My email address: <strong>s.zhan.22@abdn.ac.uk</strong>; <br>If you wanna contact with me, please drop me an
           email!</p>
-    </div>
+      </article>
 
+    </div>
   </main>
+
+  <footer>
+
+  </footer>
 </body>
-<script src="../js/Profile.js"></script>
 
 </html>

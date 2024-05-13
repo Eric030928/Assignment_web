@@ -10,76 +10,83 @@
 </head>
 
 <body>
-    <div class="top_nav">
-        <strong>
-            <div id="about_nav"><a href="./About.html" class="title">About me</a></div>
-        </strong>
-        <strong>
-            <div id="awards_nav"><a href="./Awards.html" class="title">Awards</a></div>
-        </strong>
-        <strong>
-            <div id="hobbies_nav"><a href="./Hobbies.html" class="title">Hobbies</a></div>
-        </strong>
-        <strong>
-            <div id="project_nav"><a href="./Project.html" class="title">Projects</a></div>
-        </strong>
-        <strong>
-            <div id="quiz_nav"><a href="./Quiz.html" class="title">Quiz</a></div>
-        </strong>
-    </div>
-    <img src="../figures/Project.jpg" alt="" id="background_pic">
-    <main class="content">
-        <section class="s1">
-            <h1 id="introduction_word">Welcome to quiz!
-            </h1>
-            <button id="home_button" onmouseover="learnHover(this)" onmouseout="learnHoverOut(this)"
-                onclick="openModal();">
-                Let's start it!
-            </button>
+    <header>
+        <nav class="top_nav">
+            <div id="about_nav"><a href="./About.html" class="title"><strong>About me</strong></a></div>
+            <div id="awards_nav"><a href="./Awards.html" class="title"><strong>Awards</strong></a></div>
+            <div id="hobbies_nav"><a href="./Hobbies.html" class="title"><strong>Hobbies</strong></a></div>
+            <div id="project_nav"><a href="./Project.html" class="title"><strong>Projects</strong></a></div>
+            <div id="quiz_nav"><a href="./Quiz.html" class="title"><strong>Quiz</strong></a></div>
+        </nav>
+    </header>
 
-            <div id="modal" class="modal">
+    <figure> <img src="../figures/Project.jpg" alt="" id="background_pic"></figure>
+
+    <main class="content">
+        <div class="s1">
+            <article>
+                <h1 id="introduction_word">Welcome to quiz!
+                </h1>
+                <button id="home_button" onmouseover="learnHover(this)" onmouseout="learnHoverOut(this)"
+                    onclick="openModal();">
+                    Let's start it!
+                </button>
+            </article>
+
+            <section id="modal" class="modal">
                 <div class="modal-content">
-                  <span class="close" onclick="closeModal()">&times;</span>
-                  <div class="question_time">
-                    <h1 id="modal_title_question" style="display: none">Example question:</h1>
-                    <h3 id="modal_title_time" style="display: none"><strong>Time remaining: 15s <em>(The time will keep reducing)</em></strong></h3>
-                  </div>
-                  <h2 id="modal_title">Welcome to quiz! Give your name:</h2>
-                  <p id="reminder">Reminder: If you close the quiz before you complete it, you will lose the record and all the marks that you obtained!</p>
-                  <p id="question" style="display:none">Where is America? <br> <em>(Choose the answer below and click the button to submit your answer)</em></p>
-                  <form id="name_form" method="post">
-                    <input type="text" id="Name_input" placeholder="Type here!">
-                    <br>
-                    <button type="submit" id="Name_button" onclick="updateModalContent(event)">Submit</button>
-                  </form>
-                  <div id="options_container">
-                    <button class="option" onclick="selectOption(1)" id="option_1">A. Asia </button>
-                    <button class="option" onclick="selectOption(2)" id="option_2">B. Europe </button>
-                    <button class="option" onclick="selectOption(3)" id="option_3">C. Africa </button>
-                    <button class="option" onclick="selectOption(4)" id="option_4">D. Pacific </button>
-                  </div>
-                  <button type="submit" id="Name_button_0" onclick="nextQuestion(event),transfer(event)">Continue</button>
-                  <button type="submit" id="Name_button_1" onclick="nextQuestion(event)">Submit</button>
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="question_time">
+                        <h1 id="modal_title_question" style="display: none">Example question:</h1>
+                        <h3 id="modal_title_time" style="display: none"><strong>Time remaining: 15s <em>(The time will
+                                    keep reducing)</em></strong></h3>
+                    </div>
+                    <h2 id="modal_title">Welcome to quiz! Give your name:</h2>
+                    <p id="reminder">Reminder: If you close the quiz before you complete it, you will lose the record
+                        and all the marks that you obtained!</p>
+                    <p id="question" style="display:none">Where is America? <br> <em>(Choose the answer below and click
+                            the button to submit your answer)</em></p>
+                    <form id="name_form" method="post">
+                        <input type="text" id="Name_input" placeholder="Type here!">
+                        <br>
+                        <button type="submit" id="Name_button" onclick="updateModalContent(event)">Submit</button>
+                    </form>
+                    <div id="options_container">
+                        <button class="option" onclick="selectOption(1)" id="option_1">A. Asia </button>
+                        <button class="option" onclick="selectOption(2)" id="option_2">B. Europe </button>
+                        <button class="option" onclick="selectOption(3)" id="option_3">C. Africa </button>
+                        <button class="option" onclick="selectOption(4)" id="option_4">D. Pacific </button>
+                    </div>
+                    <button type="submit" id="Name_button_0"
+                        onclick="nextQuestion(event),transfer(event)">Continue</button>
+                    <button type="submit" id="Name_button_1" onclick="nextQuestion(event)">Submit</button>
                 </div>
-              </div>
-              <div id="leaderboard">
+            </section>
+
+            <section id="leaderboard">
                 <h1>Leaderboard</h1>
                 <table id="table_1">
                     <thead>
-                        <th class="head" style="width: 204px;">Player</th>
-                        <th class="head" style="width: 176px;">Score</th>
-                        <th class="head" style="width: 190px;">Time used(unit:s)</th>
+                        <tr>
+                            <th class="head" style="width: 204px;">Player</th>
+                            <th class="head" style="width: 176px;">Score</th>
+                            <th class="head" style="width: 190px;">Time used (unit: s)</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td></td>
+                            <td></td>
                             <td></td>
                         </tr>
                     </tbody>
                 </table>
                 <button type="submit" id="Name_button_2" onclick="end(event)">Close</button>
-            </div>
             </section>
+        </div>
     </main>
+
+    <footer></footer>
 </body>
 
 </html>
