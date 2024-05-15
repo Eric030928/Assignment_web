@@ -31,7 +31,7 @@ As shown below, my project contains the following files in this structure:
 
 Among them, main.js is the server-side code of the project and the entry file of the project; package-lock.json and package.json files are the configuration files generated after enabling the node.js service; the src folder contains the html, css,js, figures folder and leaderboard. json file, html contains the structure of each page file, css contains the beautification of each page file, js contains the interactive function code of each page, figures contains some of the images that I use in the whole project, leaderboard.json is stored in Quiz in json format need to store or call the leaderboard data.
 ### 2.2 Web Structure
-
+![image](Readme_figure/Web_structure.png)
 ----
 
 ## 3. Design of the Website
