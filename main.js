@@ -4,8 +4,13 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 const port = 5500;
+const opn = require('opn');
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// 打开默认浏览器
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json()); // 用于解析 application/json
 app.use(express.static(path.join(__dirname, 'src')));
 app.set('view engine', 'ejs');
@@ -41,39 +46,34 @@ app.get('/Quiz', (req, res) => {
 
 app.post('/submit', (req, res) => {
   leaderboard = [];
-  // 读取leaderboard.json文件的内容
+  // Read leaderboard.json
   fs.readFile('./src/leaderboard.json', 'utf8', (err, data) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        // 如果文件不存在，初始化为空数组
+        // If null
         leaderboard = [];
       } else {
         console.error(err);
         return res.status(500).send('Internal Server Error');
       }
     } else {
-      // 尝试将读取到的数据解析为JSON，如果解析失败，默认为[]
       leaderboard = JSON.parse(data) || [];
     }
-
-    // 创建一个新的得分记录对象
+    // Create a new object to take the values that passed
     const scoreRecord = {
       userName: req.body.userName,
       finalScore: req.body.finalScore,
       finalTime: req.body.finalTime
     };
-
-    // 将得分记录添加到得分榜中
+    // Push it into the record
     leaderboard.push(scoreRecord);
-
-    // 将更新后的得分榜写入leaderboard.json文件
+    // Write it back
     fs.writeFile('./src/leaderboard.json', JSON.stringify(leaderboard), 'utf8', err => {
       if (err) {
         console.error(err);
         return res.status(500).send('Internal Server Error');
       }
-
-      // 返回成功的响应
+      // Return the response of the success
       res.status(200).send('Score submitted successfully');
     });
   });
@@ -90,3 +90,5 @@ app.get('/leaderboard', (req, res) => {
     res.json(leaderboard);
   });
 });
+
+opn(`http://localhost:${port}`);

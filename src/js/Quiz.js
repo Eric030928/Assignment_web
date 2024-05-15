@@ -257,7 +257,6 @@ function nextQuestion(event) {
         finalTime: finalTime
       };
 
-      // 发送POST请求到服务器
       fetch('/submit', {
           method: 'POST',
           headers: {
@@ -272,14 +271,13 @@ function nextQuestion(event) {
           return response.json();
         })
         .then(data => {
-          // 请求成功的处理逻辑
+          // If Success
           console.log(data);
         })
         .catch(error => {
-          // 请求失败的处理逻辑
+          // If fault
           console.error('There has been a problem with your fetch operation:', error);
         });
-      // 获取模态框元素
 
       setTimeout(function () {
         var modal = document.getElementById("modal");
@@ -294,20 +292,17 @@ function nextQuestion(event) {
             return response.json();
           })
           .then(data => {
-            // 处理获取到的数据
             var leaderboard_table = document.getElementById('table_1');
             var tbody = leaderboard_table.getElementsByTagName('tbody')[0];
 
             for (let i = 0; i < data.length; i++) {
               data.sort(function (a, b) {
-                // 比较finalScore，降序
                 if (parseInt(a.finalScore) > parseInt(b.finalScore)) {
                   return -1;
                 }
                 if (parseInt(a.finalScore) < parseInt(b.finalScore)) {
                   return 1;
                 }
-                // 如果finalScore相同，比较finalTime，升序
                 return parseFloat(a.finalTime) - parseFloat(b.finalTime);
               });
               const userName = data[i].userName;
@@ -381,7 +376,7 @@ function hideModal() {
   modal.style.display = "none";
 }
 
-function end(){
+function end() {
   var leaderboard_content = document.getElementById("leaderboard");
   leaderboard_content.style.display = "none";
   location.reload();

@@ -6,6 +6,6 @@ function learn_hover_out(obj) {
   obj.innerHTML = "Learn about me!"
 }
 
-function jump(obj){
+function jump(obj) {
   location.href = "../html/About.html"
 }

@@ -1,112 +1,136 @@
-/* Top navigation bar */
+/* Here is the setup of the navigation system to make sure it will be the top of the page and the background of it will be transparent */
 .top_nav {
-  display: flex; /* Displays the elements in a horizontal row */
-  font-size: x-large; /* Sets the font size to extra large */
-  flex-direction: row; /* Arranges the elements in a row */
-  justify-content: space-evenly; /* Distributes the space evenly between the elements */
-  flex-wrap: wrap; /* Allows the elements to wrap to the next row */
-  padding: 20px; /* Adds padding around the elements */
-  margin: 0px; /* Removes margin */
-  border-left: 0px; /* Removes the left border */
-  position: absolute; /* Positions the navigation bar absolutely */
-  left: 0; /* Positions the navigation bar to the left */
-  top: 0px; /* Positions the navigation bar to the top */
-  width: 100%; /* Sets the width to 100% of the container */
-  text-decoration: none; /* Removes text decoration */
-  opacity: 0; /* Sets the initial opacity to 0 */
-  animation: fadeIn 1s 0.5s forwards; /* Applies a fade-in animation */
+  display: flex;
+  /* Set display property to flex */
+  font-size: x-large;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* Distribute flex items evenly along the main axis */
+  flex-wrap: wrap;
+  /* Allow flex items to wrap to the next line if necessary */
+  padding: 25px;
+  margin: 0px;
+  border-left: 0px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+  /* Apply a fade-in animation with a duration of 1 second and a delay of 0.5 seconds */
 }
 
-/* Navigation bar title */
+/* Here is the setup of the character of the navigation system to make sure their display */
 .title {
-  text-decoration: none; /* Removes text decoration */
-  color: #022769; /* Sets the color to a specific shade of blue */
+  text-decoration: none;
+  /* Remove text decoration such as underline */
+  color: #015990;
 }
 
 .title:hover {
-  text-decoration: underline; /* Adds underline on hover */
-  color: darkgreen; /* Sets the color to dark green on hover */
+  text-decoration: underline;
+  color: darkgreen;
 }
 
 /* Navigation bar links */
 #about_nav {
-  font-size: 40px; /* Sets the font size to 40px */
+  font-size: 40px;
+  /* Sets the font size to 40px */
 }
 
 #awards_nav {
-  font-size: 40px; /* Sets the font size to 40px */
+  font-size: 40px;
+  /* Sets the font size to 40px */
 }
 
 #hobbies_nav {
-  font-size: 40px; /* Sets the font size to 40px */
+  font-size: 40px;
+  /* Sets the font size to 40px */
 }
 
 #project_nav {
-  font-size: 40px; /* Sets the font size to 40px */
-  text-decoration: underline; /* Adds underline */
-  text-decoration-color: #015990; /* Sets the underline color to a specific shade of blue */
+  font-size: 40px;
+  /* Sets the font size to 40px */
+  text-decoration: underline;
+  /* Adds underline */
+  text-decoration-color: #015990;
+  /* Sets the underline color to a specific shade of blue */
 }
 
 #quiz_nav {
-  font-size: 40px; /* Sets the font size to 40px */
+  font-size: 40px;
+  /* Sets the font size to 40px */
 }
 
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Starts with opacity 0 */
+    opacity: 0;
+    /* Starts with opacity 0 */
   }
+
   to {
-    opacity: 1; /* Ends with opacity 1 */
+    opacity: 1;
+    /* Ends with opacity 1 */
   }
 }
 
 /* Background image */
 #background_pic {
-  position: fixed; /* Positions the image fixed on the screen */
-  top: 0; /* Positions the image to the top */
-  left: 0; /* Positions the image to the left */
-  width: 100%; /* Sets the width to 100% of the container */
-  height: 100%; /* Sets the height to 100% of the container */
-  z-index: -1; /* Sets the stack order to be behind other elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Sets the stack order to be behind other elements */
 }
 
 /* Content container */
 #content {
-  display: flex; /* Displays the container as a flexbox */
-  font-size: 25px; /* Sets the font size to 25px */
-  margin-top: 7%; /* Adds top margin */
-  color: #000000; /* Sets the text color to black */
-  background-color: rgba(255, 255, 255, 0.9); /* Sets the background color with opacity */
-  border: 10px solid #78a7f8; /* Adds a border with a specific color */
-  padding-left: 2%; /* Adds left padding */
-  border-radius: 5%; /* Adds border radius */
-  flex-direction: column; /* Arranges the content in a column */
-  line-height: 130%; /* Sets the line height to 130% */
-  font-size: x-large; /* Sets the font size to extra large */
-  margin-left: 9%; /* Adds left margin */
-  position: absolute; /* Positions the container absolutely */
-  left: 0; /* Positions the container to the left */
-  top: 0; /* Positions the container to the top */
-  width: 80%; /* Sets the width to 80% of the container */
-  float: left; /* Floats the container to the left */
-  animation: floatLeft 1s forwards; /* Applies a float-left animation */
+  display: flex;
+  font-size: 25px;
+  margin-top: 7%;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 10px solid #78a7f8;
+  padding-left: 2%;
+  border-radius: 5%;
+  flex-direction: column;
+  line-height: 130%;
+  font-size: x-large;
+  margin-left: 9%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  float: left;
+  /* Floats the container to the left */
+  animation: floatLeft 1s forwards;
+  /* Applies a float-left animation */
 }
 
 /* Heading h3 */
 h3 {
-  color: #000000; /* Sets the color to black */
-  margin-left: 1%; /* Adds left margin */
-  margin-top: 3%; /* Adds top margin */
-  margin-bottom: 0; /* Removes bottom margin */
+  color: #000000;
+  /* Sets the color to black */
+  margin-left: 1%;
+  /* Adds left margin */
+  margin-top: 3%;
+  /* Adds top margin */
+  margin-bottom: 0;
+  /* Removes bottom margin */
 }
 
 /* Float-left animation */
 @keyframes floatLeft {
   from {
-    transform: translateX(100%); /* Starts with translateX 100% */
+    transform: translateX(100%);
+    /* Starts with translateX 100% */
   }
+
   to {
-    transform: translateX(0); /*结束时的 translateX 0 */
+    transform: translateX(0);
   }
 }
