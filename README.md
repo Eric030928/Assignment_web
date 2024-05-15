@@ -63,7 +63,7 @@ This page is the first page that appears after launching the project and serves 
 
 **(2) Design of the page**
 The page contains only a background video, an introductory statement "Welcome come to my world" and a sky blue button that says "Learn about me!".
-![image]()
+![image](Readme_figure/Welcome.png)
 To implement the video, I introduced it into the page via the \<video> tag, set its position to fixed, width and height to 100%, and placed it at the bottom of the page, successfully fixing it in the centre of the page and spreading it across the page.
 In the statement and button implementation, I use CSS animation effects, using @keyframes to create animation effects, and animation-name will be the corresponding animation effects into the final presentation of the statement from the right to the left into the buttons from the bottom to the top of the page effect. And, in the implementation of the button, I also added the class to learn the .hover on the mouse over the element to change the appearance, so that the page is more cool and beautiful.
 Clicking the button will take you to the About page.
@@ -75,7 +75,7 @@ This page contains my basic introduction, that is, my name, age, hometown, educa
 
 **(2) Design of the page**
 On the left side of the page is my profile picture, on the right side is my introductory information, and at the very top of the page is a navigation bar with no border and no background color, so you can click on the name of the corresponding content to go to that page. 
-![[About 1.png]]
+![image]()
 Again, for aesthetic effect, I set an animation effect in the style of the image and the text content box, similar to the implementation of the Welcome page, which ultimately makes both my photo and the content text box float from bottom to top.
 And, in the implementation of the navigation bar, I used **.hover** and **text-decoration** to achieve that when the mouse moves over the text, the text turns green and is underlined. The underline is also automatically added below the text when the text is clicked. With this design, you can know the page you are on more clearly and improve the aesthetics of the page at the same time.
 In order to focus on the text headings to separate the content, I also used the \<h>, \<strong> and \<em> text tags to achieve content focus.
