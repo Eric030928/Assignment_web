@@ -5,7 +5,7 @@
 - Major: Computer Science
 - Name: Zhan Shiquan
 - Student Number: 50087448
-- Github: 
+- Github: https://github.com/Eric030928/Assignment_web
 
 ---------
 ## 1. Run the project
