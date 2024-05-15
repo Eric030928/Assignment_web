@@ -27,7 +27,8 @@ npm start
 ##  2. Structure Overview
 ### 2.1 File Structure
 As shown below, my project contains the following files in this structure:
-![[File_tree.png]]
+![image](Readme_figure/File_tree.png)
+
 Among them, main.js is the server-side code of the project and the entry file of the project; package-lock.json and package.json files are the configuration files generated after enabling the node.js service; the src folder contains the html, css,js, figures folder and leaderboard. json file, html contains the structure of each page file, css contains the beautification of each page file, js contains the interactive function code of each page, figures contains some of the images that I use in the whole project, leaderboard.json is stored in Quiz in json format need to store or call the leaderboard data.
 ### 2.2 Web Structure
 
@@ -62,7 +63,7 @@ This page is the first page that appears after launching the project and serves 
 
 **(2) Design of the page**
 The page contains only a background video, an introductory statement "Welcome come to my world" and a sky blue button that says "Learn about me!".
-![[Welcome.png]]
+![image]()
 To implement the video, I introduced it into the page via the \<video> tag, set its position to fixed, width and height to 100%, and placed it at the bottom of the page, successfully fixing it in the centre of the page and spreading it across the page.
 In the statement and button implementation, I use CSS animation effects, using @keyframes to create animation effects, and animation-name will be the corresponding animation effects into the final presentation of the statement from the right to the left into the buttons from the bottom to the top of the page effect. And, in the implementation of the button, I also added the class to learn the .hover on the mouse over the element to change the appearance, so that the page is more cool and beautiful.
 Clicking the button will take you to the About page.
