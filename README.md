@@ -75,7 +75,7 @@ This page contains my basic introduction, that is, my name, age, hometown, educa
 
 **(2) Design of the page**
 On the left side of the page is my profile picture, on the right side is my introductory information, and at the very top of the page is a navigation bar with no border and no background color, so you can click on the name of the corresponding content to go to that page. 
-![image]()
+![image](Readme_figure/About 1.png)
 Again, for aesthetic effect, I set an animation effect in the style of the image and the text content box, similar to the implementation of the Welcome page, which ultimately makes both my photo and the content text box float from bottom to top.
 And, in the implementation of the navigation bar, I used **.hover** and **text-decoration** to achieve that when the mouse moves over the text, the text turns green and is underlined. The underline is also automatically added below the text when the text is clicked. With this design, you can know the page you are on more clearly and improve the aesthetics of the page at the same time.
 In order to focus on the text headings to separate the content, I also used the \<h>, \<strong> and \<em> text tags to achieve content focus.
@@ -86,7 +86,7 @@ In order to focus on the text headings to separate the content, I also used the 
 This page contains scholarships, competition awards and school honors that I have achieved.
 
 (2) Design of the page
-![[Awards.png]]
+![imgae](Readme_figure/Awards.png)
 Similarly, at the top of the page I set up a global navigation bar so you can navigate to individual pages. In the text, I used \<strong> and  \<em> to differentiate the text, and I used the unordered list \<ul> that I learned in class to set the formatting for each honor. And, I set the border of the text box to a blue border, white background, using animation effects to achieve the visual effect of floating from right to left, making the page more beautiful.
 
 #### 3.2.4 Hobbies page
@@ -95,9 +95,9 @@ Similarly, at the top of the page I set up a global navigation bar so you can na
 The page contains my daily hobbies, singing, cooking and traveling. It contains pictures of my various hobbies, including pictures of me performing, cooking, and taking pictures of my travels, and next to the pictures are my feelings and experiences about these hobbies.
 
 **(2) Design of the page**
-![[Hobbies_1.png]]
+![image](Readme_figure/Hobbies_1.png)
 The navigation bar is set up in the same way as on the previous page, so I won't go into that too much detail here. On this page, in addition to implementing a centered text box with a blue border, as I did on the previous two pages, I also made innovative use of a rotating image to display my photos. Specifically, in the implementation of the rotating image, I used CSS to restrict each slide so that their position is limited to the slide-container, and I also used a Javascript function to make each photo switch every 1 second to ensure that each photo disappears after 2s and the other fades in. You can refer to my code for details:
-![[Slide-container.png]]
+![image](Readme_figure/Slide-container.png)
 By using rotating images, my photos don't become redundant or unplaceable, adding to the aesthetic effect to some extent. And, in the text setting, in order to make some space for the rotating image to distribute, I use margin to set the position of the paragraph, so that the paragraph will not be covered by the rotating image.
 
 #### 3.2.5 Projects page
@@ -106,29 +106,29 @@ By using rotating images, my photos don't become redundant or unplaceable, addin
 This page includes the content of several projects that I have worked on during my school years, specifically when the project started and ended, the name of the project, the role I took on, and what I was primarily responsible for in the project.
 
 (2) Design of the page
-![[Project.png]]
+![image](Readme_figure/Project.png)
 The design of this page is relatively simple, and is basically the same as the design and implementation of the Awards page, so I won't go into too much detail here. The only difference is that in the line for the project's start and end times, project name and role, I used **&thinsp** to implement spaces in order to separate the three, successfully creating the effect of spacing.
 
 #### 3.2.6 Quiz page
 **(1) Description**
 This page is the focal point of the assignment, and I will provide a detailed explanation of its implementation method and specifics.
 On the Quiz page, the user is first navigated to the Quiz welcome page:
-![[Quiz_1.png]]
+![image](Readme_figure/Quiz_1.png)
 Before starting the quiz, you need to click the center button "Let's start it" to enter the quiz mode. In my setup, when the user clicks the button, a modal box will pop up first, and the user needs to enter his/her own name, and then click the "Submit In my setup, when user clicks the button, a modal box will pop up first, user need to enter his/her name, then click "Submit" button to go to the next page, otherwise it will pop up a warning to enter your name and can't answer (You can have a try if you are interested in that because I won't show it below):
-![[Quiz_2.png]]
+![image](Readme_figure/Quiz_2.png)
 After clicking the submit button, the user will see a page of sample questions. In fact, this example question is not mandatory in our task, but I put here an example question with no answer detection and no countdown so that the user is fully familiar with my answer page. In the example question, I have explained the content, such as how the question is answered, how long the countdown is, how the time will keep decreasing and what the style of the options are. By having a sample question like this, I think it will help users of the site to quickly understand the process and start answering the questions:
-![[Quiz_3.png]]
+![image](Readme_figure/Quiz_3.png)
 After clicking the "Continue" button below, the user will enter the quiz page without prompting, and the system will automatically start timing the user's quiz time. In order to enhance the fun and excitement of the test, I deliberately chose to set the countdown time to 5 seconds a question, 5 seconds more than the system will pop-up window to inform the user "Time out!", after the user to close the warning, the system will automatically switch to the next question and the question will not be added to the score. Note that even if the user selects an answer, but does not click the submit button, it is still considered time out. There are a total of 10 questions, covering history, math, etc., to fully test the breadth of the user's knowledge.
-![[Quiz_4.png]]
+![image](Readme_figure/Quiz_4.png)
 The user's starting score is 0, after each correct answer, the system will automatically add 1 point for the user; if the answer is wrong, the system will not deduct points, but will not give the user additional points. In other words, the total score is 10 points, and the user will only be awarded points if he/she answers the question correctly.
-![[Quiz_5.png]]
+![image](Readme_figure/Quiz_5.png)
 After answering the 10th question, or after the 10th question timeout, the system will pop-up window to inform the user that the question has been answered, the number of questions answered correctly by the user within 10 questions, and the time from the beginning to the end of the user's answer.
-![[Quiz_6.png]]
+![image](Readme_figure/Quiz_6.png)
 After the 10th question is answered, or after the 10th question has timed out, a pop-up window will appear to notify the user that the question has been answered, the number of questions the user has answered correctly within the 10-question period, and the amount of time that has elapsed from the start to the end of the user's answer. After closing this notification, a "Completed" notification will be sent to remind the user that the question has been completed and the button below will change to "Check the leaderboard". Also, the time will be reset to -1s so that the question timer will not start again.
 Moreover, after the 10th question, the user's username, score and time spent on answering the question will be uploaded to the server, which will record the data on the leaderboard, and it will be retrieved when it needs to be called.
-![[Quiz_7.png]]
+![image](Readme_figure/Quiz_7.png)
 After clicking the button, the system will automatically jump to the Leaderboard text box, displaying a table containing each user's username, score, and time spent answering data. The first column is the username, the second column is the score, the third column is the answer time; the number of rows of data represents the ranking of the player, for example, the user "juj" in the third row is ranked No. 3. The table is automatically sorted by Score from highest to lowest, and the one who spends less time will be ranked higher when the Scores are the same. Through the reasonable and clear structure of the table, users can more intuitively see the data of all players and their own rankings, and have a more fresh feeling of competition.
-![[Quiz_8.png]]
+![image](Readme_figure/Quiz_8.png)
 Click the "Close" button below to refresh the site and redirect to the Quiz page. This concludes the process of answering the quiz.
 
 **(2) Design of the front-end**
@@ -139,7 +139,7 @@ Secondly, in terms of styling the options, I didn't choose HTML radio boxes for 
 In addition to this, I did not choose to use other methods to display the results in the prompts after each question was answered, but instead chose to display the results in a modal box, which ensured that the user could not move on to the next step without confirming the information.
 
 For the leaderboards, I chose to place the leaderboards in a text box that pops up when the button is clicked, and I implemented this logic in Javascript. And, in the button and text setup, I did the same to hide and show the buttons, i.e. changing from **display:none** to **display:block**, or selecting the corresponding element using **document.getElementById** and changing it between the current pages using **.innerHTML**. Specifically, I bind what I want to show next to a Javascript function that ensures that when that function executes, the elements I want to make disappear will be hidden and the elements I want to make appear will be shown. By switching between elements in this flexible way, I keep the page looking clean, and the user doesn't have to spend time on network signals, which can lead to inefficiencies and poor user interaction.
-![[Quiz_9.png]]
+![image](Readme_figure/Quiz_9.png)
 
 **(3) Design of the back-end**
 This section, which is also about how the quiz application client side communicates with the server, with respect to handling events.
@@ -155,17 +155,17 @@ Secondly, I created a main.js file in the root directory as the entry file for m
 Specifically, I started by importing my installed libraries or packages in the file, both express, body-parser, path, fetch API for subsequent use. And, I also set the port number to 5500, made basic configurations to the project, such as introducing libraries for parsing files in json format, setting the file directory paths for the view files, etc., so I won't overdo it in this section.
 
 Next, I used the get method to set up the routes so that the user can receive the web files I transferred when the client enters the corresponding route of the website.
-![[Quiz_10.png]]
+![image](Readme_figure/Quiz_10.png)
 As mentioned earlier, the user needs to upload the user's username, score and answer time after answering the question, in this step, I used the fetch API to send a POST request to the server's logic in the logic after the user has finished answering the question in Quiz.js, and set up the data objects to be passed in.
-![[Quiz_11.png]]
+![image](Readme_figure/Quiz_11.png)
 At the same time, I also introduced the fetch API in the server-side code to receive client-initiated requests, set the method to POST, and re-store the received data into a new array, and after storing it, re-write that array to the leaderboard.json file.
 After this step, I have implemented the operation of uploading the answer data from the client to the server.
 
 3. How did I make the quiz application server side sends the data to client side and show it into the table?
 In this step, I have used a GET request for the client to initiate the data request, with a syntax structure similar to POST. 
-![[Quiz_12.png]]
+![image](Readme_figure/Quiz_12.png)
 And I have added code on the server side to respond to the GET request by reading the server side leaderborder.json file and transferring the data to the user side. After this, I add data processing logic in the client side Javascript code so that the client side processes the data after accepting it and displays the data in the form.
-![[Quiz_13.png]]
+![image](Readme_figure/Quiz_13.png)
 With that, I implemented server-side and client-side data transfer through the Express framework and the Fetch API.
 
 -------
